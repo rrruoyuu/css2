@@ -1,3 +1,4 @@
+//slider
 let currentIndex = 0;
 const slider = document.getElementById("slider");
 const slides = document.querySelectorAll(".slide");
@@ -39,31 +40,31 @@ function createNavbar(targetId) {
 
   // create nav item for home
   const homeNavItem = document.createElement("a");
-  homeNavItem.href = "index.html";
+  homeNavItem.href = "../index.html";
   const homeNavItemText = document.createTextNode("Home");
   homeNavItem.appendChild(homeNavItemText);
 
   // create nav item for korea
   const koreaNavItem = document.createElement("a");
-  koreaNavItem.href = "Korea/korea.html";
+  koreaNavItem.href = "../Korea/korea.html";
   const koreaNavItemText = document.createTextNode("Korean");
   koreaNavItem.appendChild(koreaNavItemText);
 
   // create nav item for japan
   const japanNavItem = document.createElement("a");
-  japanNavItem.href = "Japan/japan.html";
+  japanNavItem.href = "../Japan/japan.html";
   const japanNavItemText = document.createTextNode("Japanese");
   japanNavItem.appendChild(japanNavItemText);
 
    // create nav item for singapore
   const singaporeNavItem= document.createElement("a");
-  singaporeNavItem.href = "Singapore/singapore.html";
+  singaporeNavItem.href = "../Singapore/singapore.html";
   const singaporeNavItemText = document.createTextNode("Singapore");
   singaporeNavItem.appendChild(singaporeNavItemText);
 
    // create nav item for china
   const chinaNavItem= document.createElement("a");
-  chinaNavItem.href = "China/china.html";
+  chinaNavItem.href = "../China/china.html";
   const chinaNavItemText = document.createTextNode("Chinese");
   chinaNavItem.appendChild(chinaNavItemText);
 
@@ -126,4 +127,46 @@ if (pinsLayer && tip) {
   }
 
   pins.forEach(p => pinsLayer.appendChild(makePin(p)));
+}
+
+//poll
+const options=document.querySelectorAll(".option");
+
+let votes={};
+let totalVotes=0;
+let hasVoted=false;
+
+options.forEach(option=>{
+  const item=option.dataset.item;
+  votes[item]=0;
+});
+
+document.querySelectorAll(".voteBtn").forEach(button => {
+  button.addEventListener("click", () => {
+
+    if (hasVoted) {
+      alert("You already voted!");
+      return;
+    }
+
+    const option = button.closest(".option");
+    const item = option.dataset.item;
+
+    votes[item]++;
+    totalVotes++;
+    hasVoted = true;
+
+    updateResults();
+  });
+});
+
+function updateResults() {
+  options.forEach(option => {
+    const item = option.dataset.item;
+    const percent = (votes[item] / totalVotes) * 100;
+
+    option.querySelector(".fill").style.width = percent + "%";
+    option.querySelector(".percent").textContent =
+      percent.toFixed(0) + "%";
+  });
 }
