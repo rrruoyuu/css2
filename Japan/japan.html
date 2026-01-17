@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Four Flavours</title>
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="style.css">
+
     </head>
 
     <body>
@@ -11,12 +13,47 @@
             <h1>Website Name</h1>
         </div>
         <div id="nav-container"></div>
-        <h1>Japan Cuisine</h1>
-        <img>
-        <p></p>
-        <h2>1. </h2>
-        </div>
-        
-        <script src="/script.js"></script>
+
+        <main style="width: 800px; margin: 40px auto; text-align: left;">
+    <h2>Japan </h2> 
+    <p>
+      Japanese food is known for its simplicity, freshness, and balance of flavors. Meals often focus on natural ingredients like rice, fish, vegetables, and soy-based foods, with an emphasis on presentation and seasonal produce. Popular dishes such as sushi, ramen, and tempura highlight careful preparation and respect for ingredients, making Japanese cuisine both comforting and refined.
+    </p>
+
+<p>Click on any food to learn more!</p>
+
+<div class="food-grid">
+
+  <div class="food-card" data-page="Japan/curryrice.html">
+    <img class="food-img" src="../images/curryrice.jpg" alt="curry rice"/>
+    <p>Curry Rice</p>
+  </div>
+
+  <div class="food-card" data-page="Japan/udon.html">
+    <img class="food-img" src="../images/udon.jpg" alt="udon" />
+    <p>Udon</p>
+  </div>
+
+  <div class="food-card" data-page="Japan/misosoup.html">
+    <img class="food-img" src="../images/misosoup.jpg" alt="miso soup" />
+    <p>Miso Soup</p>
+  </div>
+
+  <div class="food-card" data-page="Japan/takoyaki.html">
+    <img class="food-img" src="../images/takoyaki.jpeg" alt="Takoyaki" />
+    <p>Takoyaki</p>
+  </div>
+
+  <div class="food-card" data-page="Japan/okonomiyaki.html">
+    <img class="food-img" src="../images/okonomiyaki.jpg" alt="Okonomiyaki" />
+    <p>Okonomiyaki</p>
+  </div>
+</div>
+
+
+    <a href="../index.html">← Back to Home</a>
+  </main>
+
+        <script src="../script.js" defer></script>
     </body>
 </html>
