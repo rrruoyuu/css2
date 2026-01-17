@@ -2,8 +2,13 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    margin: 0px;
+    padding: 0px;
 }
 
+h1{
+    margin: 0px;
+}
 
 /*outer box */
 
@@ -12,6 +17,7 @@ body{
     overflow: hidden;
     margin: 40px auto;
     border-radius: 12px;
+    position: relative;
 }
 
 /*sliding row*/
@@ -52,6 +58,7 @@ body{
     height: 45px;
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
 }
 
 /*btn position prev*/
@@ -88,7 +95,108 @@ nav > a:hover {
 
 .header-container{
     background-color: #ecb954;
-    height: 40px;
-    text-align: left;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
+/* map styles */
+.mapSection{
+  width: min(1000px, 92vw);
+  margin: 10px auto 60px;
+  text-align: center;
+}
+
+.mapTitle{
+  margin: 10px 0 6px;
+}
+
+.mapSubtitle{
+  margin: 0 0 16px;
+  opacity: 0.85;
+}
+
+.mapCard{
+  background: rgba(0,0,0,.05);
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 18px;
+  padding: 14px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mapWrap{
+  position: relative;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.12);
+}
+
+.mapImg{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pinsLayer{
+  position: absolute;
+  inset: 0;
+}
+
+/* Pin button */
+.pin{
+  position: absolute;
+  transform: translate(-50%, -100%);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  filter: drop-shadow(0 10px 12px rgba(0,0,0,.25));
+}
+
+.pin .head{
+  width: 34px;
+  height: 34px;
+  margin: 0 auto;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 18px;
+  border: 2px solid rgba(255,255,255,.85);
+}
+
+.pin .tail{
+  width: 14px;
+  height: 14px;
+  margin: -6px auto 0;
+  background: rgba(255,255,255,.95);
+  transform: rotate(45deg);
+  border-radius: 0 0 6px 0;
+  border-right: 2px solid rgba(255,255,255,.85);
+  border-bottom: 2px solid rgba(255,255,255,.85);
+}
+
+/* Tooltip */
+.tip{
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  background: rgba(0,0,0,.70);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.22);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: .18s ease;
+  max-width: 70%;
+  pointer-events: none;
+}
+.tip.show{
+  opacity: 1;
+  transform: translateY(0);
+}
