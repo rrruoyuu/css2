@@ -70,7 +70,6 @@ body{
 nav {
   background-color: #ecb954;
   overflow: hidden;
-  justify-content: space-evenly;
   display: flex;
 }
 
@@ -83,13 +82,13 @@ nav > a {
 }
 
 nav > a:hover {
-  background-color: #ddd;
-  color: rgb(241, 185, 87);
+  background-color: white;
+  color: black;
 }
 
 .header-container{
     background-color: #ecb954;
-    height: 100px;
-    text-align: center;
+    height: 40px;
+    text-align: left;
 }
 

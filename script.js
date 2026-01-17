@@ -43,27 +43,35 @@ function createNavbar(targetId) {
   const homeNavItemText = document.createTextNode("Home");
   homeNavItem.appendChild(homeNavItemText);
 
-  // create nav item for about
-  const aboutNavItem = document.createElement("a");
-  aboutNavItem.href = "about.html";
-  const aboutNavItemText = document.createTextNode("smt 1");
-  aboutNavItem.appendChild(aboutNavItemText);
+  // create nav item for korea
+  const koreaNavItem = document.createElement("a");
+  koreaNavItem.href = "Korea/korea.html";
+  const koreaNavItemText = document.createTextNode("Korean");
+  koreaNavItem.appendChild(koreaNavItemText);
 
-  // create nav item for contact
-  const contactNavItem = document.createElement("a");
-  contactNavItem.href = "contact.html";
-  const contactNavItemText = document.createTextNode("smt 2");
-  contactNavItem.appendChild(contactNavItemText);
+  // create nav item for japan
+  const japanNavItem = document.createElement("a");
+  japanNavItem.href = "Japan/japan.html";
+  const japanNavItemText = document.createTextNode("Japanese");
+  japanNavItem.appendChild(japanNavItemText);
 
-  const NpNavItem= document.createElement("a");
-  NpNavItem.href = "np.html";
-  const NpNavItemText = document.createTextNode("smt 3");
-  NpNavItem.appendChild(NpNavItemText);
+   // create nav item for singapore
+  const singaporeNavItem= document.createElement("a");
+  singaporeNavItem.href = "Singapore/singapore.html";
+  const singaporeNavItemText = document.createTextNode("Singapore");
+  singaporeNavItem.appendChild(singaporeNavItemText);
+
+   // create nav item for china
+  const chinaNavItem= document.createElement("a");
+  chinaNavItem.href = "China/china.html";
+  const chinaNavItemText = document.createTextNode("Chinese");
+  chinaNavItem.appendChild(chinaNavItemText);
 
   navEl.appendChild(homeNavItem);
-  navEl.appendChild(aboutNavItem);
-  navEl.appendChild(contactNavItem);
-  navEl.appendChild(NpNavItem)
+  navEl.appendChild(koreaNavItem);
+  navEl.appendChild(japanNavItem);
+  navEl.appendChild(singaporeNavItem)
+  navEl.appendChild(chinaNavItem)
   document.querySelector(targetId).appendChild(navEl);
 }
 
