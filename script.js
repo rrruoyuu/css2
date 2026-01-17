@@ -1,3 +1,4 @@
+//slider
 let currentIndex = 0;
 const slider = document.getElementById("slider");
 const slides = document.querySelectorAll(".slide");
@@ -118,4 +119,46 @@ if (pinsLayer && tip) {
   }
 
   pins.forEach(p => pinsLayer.appendChild(makePin(p)));
+}
+
+//poll
+const options=document.querySelectorAll(".option");
+
+let votes={};
+let totalVotes=0;
+let hasVoted=false;
+
+options.forEach(option=>{
+  const item=option.dataset.item;
+  votes[item]=0;
+});
+
+document.querySelectorAll(".voteBtn").forEach(button => {
+  button.addEventListener("click", () => {
+
+    if (hasVoted) {
+      alert("You already voted!");
+      return;
+    }
+
+    const option = button.closest(".option");
+    const item = option.dataset.item;
+
+    votes[item]++;
+    totalVotes++;
+    hasVoted = true;
+
+    updateResults();
+  });
+});
+
+function updateResults() {
+  options.forEach(option => {
+    const item = option.dataset.item;
+    const percent = (votes[item] / totalVotes) * 100;
+
+    option.querySelector(".fill").style.width = percent + "%";
+    option.querySelector(".percent").textContent =
+      percent.toFixed(0) + "%";
+  });
 }
