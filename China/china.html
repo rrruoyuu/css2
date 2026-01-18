@@ -1,193 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Four Flavours</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Four Flavours</title>
 
-    <body>
-        <section>
-            <h2>Peking Duck</h2>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            <!-- Image goes here -->
-            <img src="../images/duck.jpg" alt="Beijing Duck image" width="300" height="200">
-            <!-- Insert image file path inside src="" -->
+<body>
 
-            <!-- Description goes here -->
+    <div class="header-container">
+        <h1>Four Flavours</h1>
+    </div>
+
+    <div id="nav-container"></div>
+
+    <!-- ===================== FRONT SECTION ===================== -->
+    <section class="cuisine">
+        <p></p>
+        <h1>Chinese Cuisine</h1>
+        <img class="food-img" src="../images/China.jpg" alt="Chinese Cuisine image">
+        <div class="desc">
             <p>
-                description
-            </p>
-        </section>
+            Chinese cuisine is rich and diverse, shaped by thousands of years of culture and tradition,
+            with flavours, ingredients, and cooking styles that vary across different regions. From savoury
+            stir-fries and comforting soups to delicate dim sum and bold, spicy dishes, it balances taste,
+            texture, and aroma using fresh ingredients like vegetables, rice, noodles, meats, and aromatic spices.
+            Whether it is the crispy skin of Peking duck, the numbing heat of mala dishes, or the warmth of sharing
+            a hotpot, Chinese food brings people together through enjoyable and memorable meals.
+        </p>
+        <p>
+            Explore our Chinese food section to discover classic dishes, learn about their unique flavours, and find
+            inspiration to enjoy or recreate these beloved meals at home.
+        </p>
+        </div>
+        
+    </section>
 
-        <hr>
 
-        <!-- Mala -->
-        <section>
-            <h2>Mala</h2>
 
-            <!-- Image goes here -->
-            <img src="../images/mala.jpg" alt="Mala image" width="300" height="200">
-            <!-- Insert image file path inside src="" -->
+    <!-- ===================== CLICKABLE FOOD GALLERY ===================== -->
+    <section>
+        <h2>Choose a food to explore</h2>
+    
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 18px;">
+                <a href="pekingduck.html" style="text-decoration: none; color: inherit;">
+                    <strong>Peking Duck</strong><br>
+                    <img class="food-img" src="../images/duck.jpg" alt="Peking Duck image">
+                </a>
+            </li>
 
-            <!-- Description goes here -->
-            <p>
-                description
-            </p>
-        </section>
+            <li style="margin-bottom: 18px;">
+                <a href="mala.html" style="text-decoration: none; color: inherit;">
+                    <strong>Mala</strong><br>
+                    <img class="food-img" src="../images/mala.jpg" alt="Mala image">
+                </a>
+            </li>
 
-        <hr>
+            <li style="margin-bottom: 18px;">
+                <a href="hotpot.html" style="text-decoration: none; color: inherit;">
+                    <strong>Hotpot</strong><br>
+                    <img class="food-img" src="../images/hotpot.jpeg" alt="Hotpot image">
+                </a>
+            </li>
 
-        <!-- Hotpot -->
-        <section>
-            <h2>Hotpot</h2>
+            <li style="margin-bottom: 18px;">
+                <a href="atea.html" style="text-decoration: none; color: inherit;">
+                    <strong>Tea</strong><br>
+                    <img class="food-img" src="../images/tea.jpg" alt="Tea image">
+                </a>
+            </li>
 
-            <ul>
-                <!-- Chongqing Hotpot -->
-                <li>
-                    <strong>Chongqing Hotpot</strong><br>
+            <li style="margin-bottom: 18px;">
+                <a href="axiaolongbao.html" style="text-decoration: none; color: inherit;">
+                    <strong>Xiao Long Bao</strong><br>
+                    <img class="food-img" src="../images/xiaolongbao.jpg" alt="Xiao Long Bao image">
+                </a>
+            </li>
+        </ul>
+    </section>
 
-                    <img src="../images/chongqinghp.png" alt="ChongQing Hotpot" width="300" height="200">
 
-                    <p>
-                        description
-                    </p>
-                </li>
+<!-- ===================== VOTING AT FRONT ===================== -->
+    <section>
+        <h2>Vote for your favourite food!</h2>
+        <p id="lastVoteText" style="margin-top: 6px;"></p>
 
-                <!-- Copper Hot Pot -->
-                <li>
-                    <strong>Copper Hot Pot</strong><br>
+        <div class="poll">
 
-                    <img src="../images/copperhp.jpeg" alt="Copper HotPot" width="300" height="200">
-
-                    <p>
-                        description
-                    </p>
-                </li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <!-- Tea -->
-        <section>
-            <h2>Tea</h2>
-
-            <ul>
-                <li>
-                    <strong>Oolong Tea</strong><br>
-
-                    <img src="" alt="Oolong Tea image">
-
-                    <p>
-                        description
-                    </p>
-                </li>
-
-                <br>
-
-                <li>
-                    <strong>Green Tea</strong><br>
-
-                    <img src="" alt="Green Tea image">
-
-                    <p>
-                        description
-                    </p>
-                </li>
-
-                <li>
-                    <strong>Da Hong Pao</strong><br>
-
-                    <!-- Image goes here -->
-                    <img src="" alt="Da Hong Pao image">
-                    <!-- Insert image file path above -->
-
-                    <p>
-                        description
-                    </p>
-                </li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <!-- Xiao Long Bao -->
-        <section>
-            <h2>Xiao Long Bao</h2>
-
-            <!-- Image goes here -->
-            <img src="" alt="Xiao Long Bao image">
-            <!-- Insert image file path inside src="" -->
-
-            <!-- Description goes here -->
-            <p>
-                description
-            </p>
-        </section>
-
-        <!--Poll-->
-        <section>
-            <h2>Vote for your favourite food!</h2>
-
-            <div class="poll">
-                <div class="option" data-item="foodname1">
-                    <div class="row">
-                        <p>foodname1: <span class="percent">0%</span></p>
-
-                        <div class="bar">
-                            <div class="fill"></div>
-                        </div>
-                        <button class="voteBtn">Vote</button>
-                    </div>
-                </div>
-
-                <div class="option" data-item="foodname2">
-                    <div class="row">
-                        <p>foodname2: <span class="percent">0%</span></p>
-
-                        <div class="bar">
-                            <div class="fill"></div>
-                        </div>
-                        <button class="voteBtn">Vote</button>
-                    </div>
-                </div>
-
-                <div class="option" data-item="foodname3">
-                    <div class="row">
-                        <p>foodname3: <span class="percent">0%</span></p>
-
-                        <div class="bar">
-                            <div class="fill"></div>
-                        </div>
-                        <button class="voteBtn">Vote</button>
-                    </div>
-                </div>
-
-                <div class="option" data-item="foodname4">
-                    <div class="row">
-                        <p>foodname4: <span class="percent">0%</span></p>
-
-                        <div class="bar">
-                            <div class="fill"></div>
-                        </div>
-                        <button class="voteBtn">Vote</button>
-                    </div>
-                </div>
-
-                <div class="option" data-item="foodname5">
-                    <div class="row">
-                        <p>foodname5: <span class="percent">0%</span></p>
-
-                        <div class="bar">
-                            <div class="fill"></div>
-                        </div>
-                        <button class="voteBtn">Vote</button>
-                    </div>
+            <div class="option" data-option="pekingDuck">
+                <div class="row">
+                    <p>Peking Duck <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
                 </div>
             </div>
-        </section>
 
-        <script src="script.js"></script>
-    </body>
+            <div class="option" data-option="mala">
+                <div class="row">
+                    <p>Mala <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
+
+            <div class="option" data-option="hotpot">
+                <div class="row">
+                    <p>Hotpot <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
+
+            <div class="option" data-option="tea">
+                <div class="row">
+                    <p>Tea <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
+
+            <div class="option" data-option="xlb">
+                <div class="row">
+                    <p>Xiao Long Bao <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+    <script src="../script.js" defer></script>
+</body>
 </html>
