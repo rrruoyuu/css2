@@ -1,0 +1,30 @@
+.food-title {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.food-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.food-card {
+  flex: 1 1 170px;
+  max-width: 220px;
+  text-align: center;
+}
+
+.food-img {
+ width: 150px;
+ height: 150px;
+ object-fit: cover;
+ aspect-ratio: 1 / 1; 
+}
+
+.food-name {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}

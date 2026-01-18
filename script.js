@@ -85,49 +85,39 @@ const tip = document.getElementById("tip");
 
 if (pinsLayer && tip) {
   const pins = [
-    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 52, y: 34 },
-    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 78, y: 27 },
-    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 91, y: 23 },
-    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 62, y: 86 },
+    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 52, y: 34, href: "China/china.html" },
+    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 78, y: 27, href: "Korea/korea.html" },
+    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 91, y: 23, href: "Japan/japan.html" },
+    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 55, y: 86, href: "Singapore/singapore.html" },
   ];
 
   function showTip(text) {
     tip.textContent = text;
     tip.classList.add("show");
     clearTimeout(showTip._t);
-    showTip._t = setTimeout(() => tip.classList.remove("show"), 1600);
+    showTip._t = setTimeout(() => tip.classList.remove("show"), 1000);
   }
 
   function makePin(p) {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "pin";
-    btn.style.left = `${p.x}%`;
-    btn.style.top = `${p.y}%`;
-    btn.setAttribute("aria-label", `${p.name} pin`);
+    const link = document.createElement("a");
+    link.className = "pin";
+    link.href = p.href;
+    link.style.left = `${p.x}%`;
+    link.style.top = `${p.y}%`;
+    link.setAttribute("aria-label", `Go to ${p.name}`);
 
-    btn.innerHTML = `
+    link.innerHTML = `
       <div class="head" style="background:${p.color}">${p.flag}</div>
       <div class="tail"></div>
     `;
 
-    btn.addEventListener("click", () => {
-      showTip(`📍 ${p.name}`);
-      btn.animate(
-        [
-          { transform: "translate(-50%, -100%) scale(1)" },
-          { transform: "translate(-50%, -100%) scale(1.12)" },
-          { transform: "translate(-50%, -100%) scale(1)" }
-        ],
-        { duration: 280, easing: "ease-out" }
-      );
-    });
-
-    return btn;
+    link.addEventListener("click", () => showTip(`Going to ${p.name}...`));
+    return link;
   }
 
   pins.forEach(p => pinsLayer.appendChild(makePin(p)));
 }
+
 
 //poll
 const options=document.querySelectorAll(".option");
