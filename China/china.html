@@ -1,136 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Four Flavours</title>
-        <link rel="stylesheet" href="../style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Four Flavours</title>
 
-    <body>
-        <div class="header-container">
-            <h1>Four Flavours</h1>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header-container">
+        <h1>Four Flavours</h1>
+    </div>
+
+    <div id="nav-container"></div>
+
+    <!-- ===================== FRONT SECTION ===================== -->
+    <section class="cuisine">
+        <p></p>
+        <h1>Chinese Cuisine</h1>
+        <img class="food-img" src="../images/China.jpg" alt="Chinese Cuisine image">
+        <div class="desc">
+            <p>
+            Chinese cuisine is rich and diverse, shaped by thousands of years of culture and tradition,
+            with flavours, ingredients, and cooking styles that vary across different regions. From savoury
+            stir-fries and comforting soups to delicate dim sum and bold, spicy dishes, it balances taste,
+            texture, and aroma using fresh ingredients like vegetables, rice, noodles, meats, and aromatic spices.
+            Whether it is the crispy skin of Peking duck, the numbing heat of mala dishes, or the warmth of sharing
+            a hotpot, Chinese food brings people together through enjoyable and memorable meals.
+        </p>
+        <p>
+            Explore our Chinese food section to discover classic dishes, learn about their unique flavours, and find
+            inspiration to enjoy or recreate these beloved meals at home.
+        </p>
         </div>
-        <div id="nav-container"></div>
-        <main style="width: 800px; margin: 40px auto; text-align: left;">
-        <h2>Peking Duck</h2>
-
-        <!-- Image goes here -->
-        <img src="../images/duck.jpg" alt="Beijing Duck image">
-        <!-- Insert image file path inside src="" -->
-
-        <!-- Description goes here -->
-        <p>
-            description
-        </p>
+        
     </section>
 
-    <hr>
 
-    <!-- Mala -->
+
+    <!-- ===================== CLICKABLE FOOD GALLERY ===================== -->
     <section>
-        <h2>Mala</h2>
-
-        <!-- Image goes here -->
-        <img src="../images/mala.jpg" alt="Mala image">
-        <!-- Insert image file path inside src="" -->
-
-        <!-- Description goes here -->
-        <p>
-            description
-        </p>
-    </section>
-
-    <hr>
-
-    <!-- Hotpot -->
-    <section>
-        <h2>Hotpot</h2>
-
-        <!-- Chongqing Hotpot -->
-        <ul>
-            <li>
-                <strong>Chongqing Hotpot</strong>
-
-                <img src="../images/chongqinghp.png" alt="ChongQing Hotpot">
-
-                <p>
-                    description
-                </p>
+        <h2>Choose a food to explore</h2>
+    
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 18px;">
+                <a href="pekingduck.html" style="text-decoration: none; color: inherit;">
+                    <strong>Peking Duck</strong><br>
+                    <img class="food-img" src="../images/duck.jpg" alt="Peking Duck image">
+                </a>
             </li>
 
-            <!-- Copper Hot Pot -->
-            <li>
-                <strong>Copper Hot Pot</strong>
+            <li style="margin-bottom: 18px;">
+                <a href="mala.html" style="text-decoration: none; color: inherit;">
+                    <strong>Mala</strong><br>
+                    <img class="food-img" src="../images/mala.jpg" alt="Mala image">
+                </a>
+            </li>
 
-                <img src="../images/copperhp.jpeg" alt="Copper HotPot">
+            <li style="margin-bottom: 18px;">
+                <a href="hotpot.html" style="text-decoration: none; color: inherit;">
+                    <strong>Hotpot</strong><br>
+                    <img class="food-img" src="../images/hotpot.jpeg" alt="Hotpot image">
+                </a>
+            </li>
 
-                <p>
-                    description
-                </p>
+            <li style="margin-bottom: 18px;">
+                <a href="atea.html" style="text-decoration: none; color: inherit;">
+                    <strong>Tea</strong><br>
+                    <img class="food-img" src="../images/tea.jpg" alt="Tea image">
+                </a>
+            </li>
+
+            <li style="margin-bottom: 18px;">
+                <a href="axiaolongbao.html" style="text-decoration: none; color: inherit;">
+                    <strong>Xiao Long Bao</strong><br>
+                    <img class="food-img" src="../images/xiaolongbao.jpg" alt="Xiao Long Bao image">
+                </a>
             </li>
         </ul>
     </section>
 
-    <hr>
 
-    <!-- Tea -->
+<!-- ===================== VOTING AT FRONT ===================== -->
     <section>
-        <h2>Tea</h2>
+        <h2>Vote for your favourite food!</h2>
+        <p id="lastVoteText" style="margin-top: 6px;"></p>
 
-        <ul>
-            <li>
-                <strong>Oolong Tea</strong><br>
+        <div class="poll">
 
-                <img src="" alt="Oolong Tea image">
+            <div class="option" data-option="pekingDuck">
+                <div class="row">
+                    <p>Peking Duck <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
 
-                <p>
-                    description
-                </p>
-            </li>
+            <div class="option" data-option="mala">
+                <div class="row">
+                    <p>Mala <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
 
-            <br>
+            <div class="option" data-option="hotpot">
+                <div class="row">
+                    <p>Hotpot <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
 
-            <li>
-                <strong>Green Tea</strong><br>
+            <div class="option" data-option="tea">
+                <div class="row">
+                    <p>Tea <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
 
-                <img src="" alt="Green Tea image">
+            <div class="option" data-option="xlb">
+                <div class="row">
+                    <p>Xiao Long Bao <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
 
-                <p>
-                    description
-                </p>
-            </li>
-
-            <li>
-                <strong>Da Hong Pao</strong><br>
-
-                <!-- Image goes here -->
-                <img src="" alt="Da Hong Pao image">
-                <!-- Insert image file path above -->
-
-                <p>
-                    description
-                </p>
-            </li>
-        </ul>
+        </div>
     </section>
 
     <hr>
-
-    <!-- Xiao Long Bao -->
-    <section>
-        <h2>Xiao Long Bao</h2>
-
-        <!-- Image goes here -->
-        <img src="../images/xiaolongbao.jpg" alt="Xiao Long Bao image">
-        <!-- Insert image file path inside src="" -->
-
-        <!-- Description goes here -->
-        <p>
-            description
-        </p>
-    </section>
-    </main>
-
-        <script src="../script.js"></script>
-    </body>
+    <script src="../script.js" defer></script>
+</body>
 </html>
