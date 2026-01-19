@@ -56,3 +56,36 @@
   color: #c0392b;
 }
 
+/* Top header bar */
+.topbar {
+  background-color: #f0c15c; /* same yellow tone */
+  padding: 20px 40px;
+}
+
+/* Big title on the left */
+.site-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Navigation row */
+.topnav {
+  margin-top: 10px;
+}
+
+.topnav a {
+  margin-right: 24px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.topnav a:hover {
+  text-decoration: underline;
+}
+
+.topnav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
