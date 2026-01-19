@@ -17,33 +17,122 @@
     <div id="nav-container"></div>
 
     <!-- ===================== MAIN CONTENT ===================== -->
-    <section class="cuisine">
-        <p></p>
+   <section class="cuisine">
+    <p></p>
 
-        <h1>Peking Duck</h1>
-        <img class="food-img" src="../images/duck.jpg" alt="Peking Duck image">
+    <h1>Peking Duck</h1>
+    <img class="food-img" src="../images/duck.jpg" alt="Peking Duck image">
 
-        <div class="desc">
+    <div class="desc">
+
+        <!-- DESCRIPTION (shown by default) -->
+        <div class="desc-preview">
             <p>
-                Peking Duck is one of China’s most famous traditional dishes, known for its
-                crispy skin and tender meat. Originating from Beijing, this dish is usually
-                roasted until golden and served with thin pancakes, spring onions, cucumber,
-                and sweet bean sauce.
+                Peking Duck is one of the most iconic dishes in Chinese cuisine, celebrated 
+                for its paper-thin crispy skin and fragrant, juicy meat. Originating from Beijing, 
+                this dish is often associated with special occasions and shared meals, where the 
+                duck is expertly roasted and sliced before diners. If you want to experience an 
+                authentic version, well-known restaurants such as Quanjude and Da Dong Roast Duck are 
+                famous for their mastery of this classic dish, offering generations-old techniques and 
+                unforgettable flavours.
             </p>
             <p>
-                The duck skin is prized for its crunch, while the meat remains juicy and flavourful.
-                Peking Duck is often enjoyed during special occasions and shared among family
-                and friends.
+                Beyond its cultural significance, Peking Duck is also a dish you can try making at home. 
+                From the crispy skin to the balance of hoisin sauce, cucumber, and spring onions wrapped 
+                in soft pancakes, each bite is deeply satisfying. Check out the cooking guide to learn how 
+                to prepare Peking Duck and recreate this classic dish in your own kitchen!
             </p>
         </div>
 
-        <!-- ===================== BACK BUTTON ===================== -->
-        <div class="back-home">
-    <a href="china.html" class="back-btn">← Back to Home</a>
-</div>
+        <!-- DETAILS (hidden by default) -->
+        <div class="desc-full">
+            <h2>🦆 Peking Duck – Home Recipe</h2>
+            <h2>🧂 Ingredients</h2>
+
+            <h3>For the Duck:</h3>
+            <ul class="ingredient-list">
+                <li>1 whole duck (about 2–2.5 kg), cleaned</li>
+                <li>1 tbsp honey or maltose</li>
+                <li>1 tbsp white vinegar</li>
+                <li>1 cup hot water</li>
+            </ul>
+
+            <h3>For Serving:</h3>
+            <ul class="ingredient-list">
+                <li>Thin Chinese pancakes (or tortillas as a substitute)</li>
+                <li>Hoisin sauce</li>
+                <li>Spring onions (julienned)</li>
+                <li>Cucumber (julienned)</li>
+            </ul>
+
+            <h2>👩‍🍳 How to Make</h2>
+
+            <ul class="steps-list">
+
+                <li>
+                    <strong>Step 1: Prepare the Duck</strong>
+                    <ul>
+                        <li>Rinse the duck thoroughly and pat it dry with paper towels</li>
+                        <li>Make sure the skin is completely dry to help it turn crispy</li>
+                    </ul>
+                </li>
+                <p></p>
+
+                <li>
+                    <strong>Step 2: Crisp the Skin</strong>
+                    <ul>
+                        <li>Mix honey (or maltose), vinegar, and hot water in a bowl</li>
+                        <li>Brush the mixture evenly over the duck skin</li>
+                        <li>Hang or place the duck uncovered in the fridge for 8–24 hours to air-dry</li>
+                    </ul>
+                </li>
+                <p></p>
+
+                <li>
+                    <strong>Step 3: Roast the Duck</strong>
+                    <ul>
+                        <li>Preheat the oven to 180°C (350°F)</li>
+                        <li>Place the duck on a rack with a tray underneath to catch the fat</li>
+                        <li>Roast for about 60–75 minutes, turning once, until the skin is golden and crispy</li>
+                    </ul>
+                </li>
+                <p></p>
+
+                <li>
+                    <strong>Step 4: Rest and Slice</strong>
+                    <ul>
+                        <li>Remove the duck from the oven and let it rest for 10 minutes</li>
+                        <li>Slice off the crispy skin and tender meat into thin pieces</li>
+                    </ul>
+                </li>
+                <p></p>
+
+                <li>
+                    <strong>Step 5: Serve</strong>
+                    <ul>
+                        <li>Spread hoisin sauce on a pancake</li>
+                        <li>Add duck, spring onion, and cucumber</li>
+                        <li>Roll it up and enjoy while warm</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- VIEW MORE BUTTON -->
+        <button class="view-more-btn" onclick="toggleDesc(this)">
+            View more
+        </button>
+    </div>
 
 
-    </section>
+    <!-- ===================== BACK BUTTON ===================== -->
+    <div class="back-home">
+        <a href="china.html" class="back-btn">← Back to Home</a>
+    </div>
+
+</section>
+
     <script src="script1.js"></script>
 
 </body>

@@ -46,3 +46,17 @@ function createNavbar(targetId) {
 
 // call function
 createNavbar("#nav-container");
+
+
+function toggleDesc(button) {
+    const desc = button.closest(".desc");
+    const full = desc.querySelector(".desc-full");
+
+    if (full.style.display === "block") {
+        full.style.display = "none";
+        button.textContent = "View more";
+    } else {
+        full.style.display = "block";
+        button.textContent = "View less";
+    }
+}
