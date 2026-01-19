@@ -42,9 +42,12 @@
     margin-bottom: 18px;
 }
 
+/* ===== FOOD GALLERY CLICK / PRESS EFFECT ===== */
+
 .food-explore ul li a {
     text-decoration: none;
     color: inherit;
+    display: block;            /* helps the whole card clickable */
 }
 
 .food-explore ul li .food-img {
@@ -52,6 +55,23 @@
     height: 130px;
     object-fit: cover;
     border-radius: 10px;
+
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+/* Hover effect (mouse over) */
+.food-explore ul li a:hover .food-img {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    filter: brightness(1.05);
+}
+
+/* Press effect (mouse down / dragging) */
+.food-explore ul li a:active .food-img {
+    transform: scale(0.95);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    filter: brightness(0.9);
 }
 
 .left-title {
