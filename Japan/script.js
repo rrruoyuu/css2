@@ -1,12 +1,12 @@
-document.querySelectorAll(".food-card").forEach((card) => {
-  card.addEventListener("click", () => {
-    const pageToOpen = card.dataset.page; // ✅ THIS is where the link comes from
-
-    if (!pageToOpen) {
-      alert("No page link found. Add data-page='...' to this food-card.");
-      return;
-    }
-
-    window.location.href = pageToOpen; // ✅ goes to that food page
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-page]").forEach(el => {
+    el.style.cursor = "pointer";
+    el.addEventListener("click", () => {
+      const page = el.dataset.page;
+      if (page) {
+        window.location.href = page;
+      }
+    });
   });
+
 });
