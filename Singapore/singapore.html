@@ -1,121 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Four Flavours</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Four Flavours</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="header-container">
-    <h1>Four Flavours</h1>
-  </div>
-  <div id="nav-container"></div>
 
-  <section class="banner">
-    <img src="/images/sg/sgfood.jpeg" alt="Singapore Cuisine">
-  </section>
-
-  <section class="desc-card">
-    <p>
-      Singapore food is known for its rich variety and strong cultural influences.
-      Influenced by Chinese, Malay, Indian, and Peranakan cultures, it is commonly
-      enjoyed in hawker centres.
-    </p>
-  </section>
-
-  <section class="food-section">
-    <h2>Choose a food to explore</h2>
-
-    <div class="food-grid">
-      <a href="sg-food.html#chicken-rice" class="food-card">
-        <img src="/images/sg/chickenrice.jpeg">
-        <h2>Chicken Rice</h2>
-      </a>
-
-      <a href="sg-food.html#laksa" class="food-card">
-        <img src="/images/sg/laksa.jpeg">
-        <h2>Laksa</h2>
-      </a>
-
-      <a href="sg-food.html#chilli-crab" class="food-card">
-        <img src="/images/sg/chillicrab.jpeg">
-        <h2>Chilli Crab</h2>
-      </a>
-
-      <a href="sg-food.html#nasi-lemak" class="food-card">
-        <img src="/images/sg/nasilemak.jpeg">
-        <h2>Nasi Lemak</h2>
-      </a>
-
-      <a href="sg-food.html#roti-prata" class="food-card">
-        <img src="/images/sg/roti%20prata.jpeg">
-        <h2>Roti Prata</h2>
-      </a>
+    <div class="header-container">
+        <h1>Four Flavours</h1>
     </div>
-  </section>
 
-      <!--Poll-->
-    <section>
-        <h2>Vote for your favourite food!</h2>
-        <div class="poll">
-            <div class="option" data-item="chicken-rice">
-                <div class="row">
-                    <p>Chicken Rice: <span class="percent">0%</span></p>
+    <div id="nav-container"></div>
 
-                    <div class="bar">
-                        <div class="fill"></div>
-                    </div>
-                    <button class="voteBtn">Vote</button>
-                </div>
-            </div>
+    <!-- ===================== FRONT SECTION ===================== -->
+    <section class="cuisine">
+        <p></p>
+        <h1>Singapore Cuisine</h1>
+        <img class="food-img" src="../images/sg/sgfood.jpeg" alt="Singapore Cuisine image">
 
-            <div class="option" data-item="Laksa">
-                <div class="row">
-                    <p>Laksa: <span class="percent">0%</span></p>
+        <div class="desc">
+            <p>
+                Singapore cuisine is a vibrant mix of cultures, shaped by Chinese, Malay,
+                Indian, and Peranakan influences. Known for its bold flavours and comforting
+                dishes, Singapore food is commonly enjoyed in hawker centres across the island.
+            </p>
 
-                    <div class="bar">
-                        <div class="fill"></div>
-                    </div>
-                    <button class="voteBtn">Vote</button>
-                </div>
-            </div>
-            
-            <div class="option" data-item="chilli-crab">
-                <div class="row">
-                    <p>Chilli Crab: <span class="percent">0%</span></p>
-
-                    <div class="bar">
-                        <div class="fill"></div>
-                    </div>
-                    <button class="voteBtn">Vote</button>
-                </div>
-            </div>
-            
-            <div class="option" data-item="nasi-lemak">
-                <div class="row">
-                    <p>Nasi Lemak: <span class="percent">0%</span></p>
-
-                    <div class="bar">
-                        <div class="fill"></div>
-                    </div>
-                    <button class="voteBtn">Vote</button>
-                </div>
-            </div>
-            
-            <div class="option" data-item="roti-prata">
-                <div class="row">
-                    <p>Roti Prata: <span class="percent">0%</span></p>
-
-                    <div class="bar">
-                        <div class="fill"></div>
-                    </div>
-                    <button class="voteBtn">Vote</button>
-                </div>
-            </div>
+            <p>
+                From fragrant rice dishes to spicy noodles and crispy flatbreads, each meal
+                reflects Singapore’s multicultural heritage and love for good food.
+                Explore our Singapore food section to discover local favourites and learn
+                more about these iconic dishes.
+            </p>
+        </div>
     </section>
 
-  <script src="../script.js"></script>
+    <!-- ===================== CLICKABLE FOOD GALLERY ===================== -->
+    <section class="food-explore">
+        <h2>Choose a food to explore</h2>
+
+        <ul>
+            <li>
+                <a href="chicken-rice.html">
+                    <strong>Hainanese Chicken Rice</strong><br>
+                    <p></p>
+                    <img class="food-img" src="../images/sg/chickenrice.jpeg" alt="Chicken Rice image">
+                </a>
+            </li>
+
+            <li>
+                <a href="laksa.html">
+                    <strong>Laksa</strong><br>
+                    <p></p>
+                    <img class="food-img" src="../images/sg/laksa.jpeg" alt="Laksa image">
+                </a>
+            </li>
+
+            <li>
+                <a href="chilli-crab.html">
+                    <strong>Chilli Crab</strong><br>
+                    <p></p>
+                    <img class="food-img" src="../images/sg/chillicrab.jpeg" alt="Chilli Crab image">
+                </a>
+            </li>
+
+            <li>
+                <a href="nasi-lemak.html">
+                    <strong>Nasi Lemak</strong><br>
+                    <p></p>
+                    <img class="food-img" src="../images/sg/nasilemak.jpeg" alt="Nasi Lemak image">
+                </a>
+            </li>
+
+            <li>
+                <a href="roti-prata.html">
+                    <strong>Roti Prata</strong><br>
+                    <p></p>
+                    <img class="food-img" src="../images/sg/roti%20prata.jpeg" alt="Roti Prata image">
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ===================== VOTING AT FRONT ===================== -->
+    <section>
+        <h2>Vote for your favourite food!</h2>
+        <p id="lastVoteText" style="margin-top: 6px;"></p>
+
+        <div class="poll">
+
+            <div class="option" data-option="chickenRice">
+                <div class="row">
+                    <p>Hainanese Chicken Rice <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
+
+            <div class="option" data-option="laksa">
+                <div class="row">
+                    <p>Laksa <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
+
+            <div class="option" data-option="chilliCrab">
+                <div class="row">
+                    <p>Chilli Crab <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
+
+            <div class="option" data-option="nasiLemak">
+                <div class="row">
+                    <p>Nasi Lemak <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
+
+            <div class="option" data-option="rotiPrata">
+                <div class="row">
+                    <p>Roti Prata <span class="percent">0%</span></p>
+                    <div class="bar"><div class="fill"></div></div>
+                    <button class="voteBtn">Vote</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+    <script src="../script.js"></script>
 </body>
 </html>
