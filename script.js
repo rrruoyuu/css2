@@ -35,48 +35,145 @@ document.querySelectorAll(".prevBtn").forEach(btn => {
 
 //nav-bar
 function createNavbar(targetId) {
-  // create navbar element
   const navEl = document.createElement("nav");
 
-  // create nav item for home
+  /* HOME */
   const homeNavItem = document.createElement("a");
   homeNavItem.href = "../index.html";
-  const homeNavItemText = document.createTextNode("Home");
-  homeNavItem.appendChild(homeNavItemText);
+  homeNavItem.textContent = "Home";
 
-  // create nav item for korea
-  const koreaNavItem = document.createElement("a");
-  koreaNavItem.href = "../Korea/korea.html";
-  const koreaNavItemText = document.createTextNode("Korean");
-  koreaNavItem.appendChild(koreaNavItemText);
+  /* ===== KOREA ===== */
+  const kDropdown = document.createElement("div");
+  kDropdown.className = "dropdown";
 
-  // create nav item for japan
-  const japanNavItem = document.createElement("a");
-  japanNavItem.href = "../Japan/japan.html";
-  const japanNavItemText = document.createTextNode("Japanese");
-  japanNavItem.appendChild(japanNavItemText);
+  const kToggle = document.createElement("a");
+  kToggle.className = "dropdown-toggle";
+  kToggle.href = "../Korea/korea.html";
+  kToggle.innerHTML = `Korea <span class="arrow">▼</span>`;
 
-   // create nav item for singapore
-  const singaporeNavItem= document.createElement("a");
-  singaporeNavItem.href = "../Singapore/singapore.html";
-  const singaporeNavItemText = document.createTextNode("Singapore");
-  singaporeNavItem.appendChild(singaporeNavItemText);
+  const kMenu = document.createElement("div");
+  kMenu.className = "dropdown-content";
 
-   // create nav item for china
-  const chinaNavItem= document.createElement("a");
-  chinaNavItem.href = "../China/china.html";
-  const chinaNavItemText = document.createTextNode("Chinese");
-  chinaNavItem.appendChild(chinaNavItemText);
+  const kFoods = [
+    { name: "Bibim", link: "bibim.html" },
+    { name: "Gimbap", link: "gimbap.html" },
+    { name: "Jeon", link: "jeon.html" },
+    { name: "Jjajang", link: "jjajang.html" },
+    { name: "Tteok", link: "tteok.html" }
+  ];
 
+  kFoods.forEach(food => {
+    const a = document.createElement("a");
+    a.href = `../Korea/${food.link}`;
+    a.textContent = food.name;
+    kMenu.appendChild(a);
+  });
+
+  kDropdown.appendChild(kToggle);
+  kDropdown.appendChild(kMenu);
+
+  /* ===== JAPAN ===== */
+  const jpDropdown = document.createElement("div");
+  jpDropdown.className = "dropdown";
+
+  const jpToggle = document.createElement("a");
+  jpToggle.className = "dropdown-toggle";
+  jpToggle.href = "../Japan/japan.html";
+  jpToggle.innerHTML = `Japanese <span class="arrow">▼</span>`;
+
+  const jpMenu = document.createElement("div");
+  jpMenu.className = "dropdown-content";
+
+  const jpFoods = [
+    { name: "Curry Rice", link: "curryrice.html" },
+    { name: "Miso Soup", link: "misosoup.html" },
+    { name: "Okonomiyaki", link: "okonomiyaki.html" },
+    { name: "Takoyaki", link: "takoyaki.html" },
+    { name: "Udon", link: "udon.html" }
+  ];
+
+  jpFoods.forEach(food => {
+    const a = document.createElement("a");
+    a.href = `../Japan/${food.link}`;
+    a.textContent = food.name;
+    jpMenu.appendChild(a);
+  });
+
+  jpDropdown.appendChild(jpToggle);
+  jpDropdown.appendChild(jpMenu);
+
+  /* ===== SINGAPORE ===== */
+  const sgDropdown = document.createElement("div");
+  sgDropdown.className = "dropdown";
+
+  const sgToggle = document.createElement("a");
+  sgToggle.className = "dropdown-toggle";
+  sgToggle.href = "../Singapore/singapore.html";
+  sgToggle.innerHTML = `Singapore <span class="arrow">▼</span>`;
+
+  const sgMenu = document.createElement("div");
+  sgMenu.className = "dropdown-content";
+
+  const sgFoods = [
+    { name: "Chicken Rice", link: "chicken-rice.html" },
+    { name: "Laksa", link: "laksa.html" },
+    { name: "Chilli Crab", link: "chilli-crab.html" },
+    { name: "Nasi Lemak", link: "nasi-lemak.html" },
+    { name: "Roti Prata", link: "roti-prata.html" }
+  ];
+
+  sgFoods.forEach(food => {
+    const a = document.createElement("a");
+    a.href = `../Singapore/${food.link}`;
+    a.textContent = food.name;
+    sgMenu.appendChild(a);
+  });
+
+  sgDropdown.appendChild(sgToggle);
+  sgDropdown.appendChild(sgMenu);
+
+  /* ===== CHINA ===== */
+  const cDropdown = document.createElement("div");
+  cDropdown.className = "dropdown";
+
+  const cToggle = document.createElement("a");
+  cToggle.className = "dropdown-toggle";
+  cToggle.href = "../China/china.html";
+  cToggle.innerHTML = `China <span class="arrow">▼</span>`;
+
+  const cMenu = document.createElement("div");
+  cMenu.className = "dropdown-content";
+
+  const cFoods = [
+    { name: "Atea", link: "atea.html" },
+    { name: "Xiao Long Bao", link: "axiaolongbao.html" },
+    { name: "Hotpot", link: "hotpot.html" },
+    { name: "Mala", link: "mala.html" },
+    { name: "Peking Duck", link: "pekingduck.html" }
+  ];
+
+  cFoods.forEach(food => {
+    const a = document.createElement("a");
+    a.href = `../China/${food.link}`;
+    a.textContent = food.name;
+    cMenu.appendChild(a);
+  });
+
+  cDropdown.appendChild(cToggle);
+  cDropdown.appendChild(cMenu);
+
+  /* ===== APPEND ALL ===== */
   navEl.appendChild(homeNavItem);
-  navEl.appendChild(koreaNavItem);
-  navEl.appendChild(japanNavItem);
-  navEl.appendChild(singaporeNavItem)
-  navEl.appendChild(chinaNavItem)
+  navEl.appendChild(kDropdown);
+  navEl.appendChild(jpDropdown);
+  navEl.appendChild(sgDropdown);
+  navEl.appendChild(cDropdown);
+
   document.querySelector(targetId).appendChild(navEl);
 }
 
 createNavbar("#nav-container");
+
 
 // map 
 // Only run pins code if the map exists on this page

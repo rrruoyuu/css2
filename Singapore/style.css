@@ -116,3 +116,12 @@
     background-color: #ae8a40;
     transform: translateY(-2px);
 }
+
+.note {
+  font-size: 14px;
+  color: #555;
+  background: #f7f7f7;
+  padding: 12px 16px;
+  border-left: 4px solid #ecb954;
+  margin: 12px 0 24px;
+}
