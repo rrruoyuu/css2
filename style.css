@@ -10,20 +10,21 @@ h1{
     margin: 0px;
 }
 /*nav bar*/
+/* ===================== NAV BAR ===================== */
+
 nav {
   background-color: #ecb954;
   display: flex;
-<<<<<<< HEAD
   gap: 24px;
   align-items: center;
-  position: relative;
-  overflow: visible;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
+/* nav links */
 nav a,
-nav a:visited,
-nav a:hover,
-nav a:active {
+nav a:visited {
   color: black;
   text-decoration: none;
   font-weight: 500;
@@ -35,53 +36,41 @@ nav a {
   display: inline-block;
 }
 
-/* hover effect (same for all tabs) */
+/* hover effect */
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 6px;
-=======
-  position: sticky;
 }
 
-nav > a {
-  display: block;
-  color: white;
-  text-align: center;
+/* ===================== HEADER ===================== */
+
+.header-container {
+  background-color: #ecb954;
+  display: flex;
+  align-items: center;
   padding: 14px 16px;
-  text-decoration: none;
-  position: sticky;
 }
 
-nav > a:hover {
-  background-color: white;
-  color: black;
-  position: sticky;
->>>>>>> a9caa0ee92cb7bf652f3a53d31efd5c2e8a618cb
-}
-
-.header-container{
-    background-color: #ecb954;
-    height: 20px;
-    text-align: left;
-    display: flex;
-    justify-content: left;
-    padding: 14px 16px;
-    position: sticky;
-}
-
-<<<<<<< HEAD
-/* ===================== DROPDOWN NAV ===================== */
+/* ===================== DROPDOWN ===================== */
 
 /* wrapper */
 .dropdown {
-  position: relative;
+  position: relative; /* ⭐ REQUIRED */
 }
 
-/* dropdown links container */
+/* toggle link */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* dropdown menu */
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 100%;      /* below the tab */
   left: 0;
   background: white;
   min-width: 180px;
@@ -91,45 +80,35 @@ nav > a:hover {
   z-index: 999;
 }
 
-/* links inside dropdown */
+/* dropdown links */
 .dropdown-content a {
   display: block;
   padding: 12px 16px;
-  text-decoration: none;
   color: black;
+  text-decoration: none;
   font-weight: 500;
-  transition: background 0.2s;
 }
 
 .dropdown-content a:hover {
-  background: #ecb954;
+  background-color: #ecb954;
 }
 
-/* arrow icon */
-.dropdown-toggle {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
+/* arrow */
 .arrow {
   font-size: 12px;
   transition: transform 0.2s ease;
 }
 
-/* rotate arrow on hover */
+/* rotate arrow */
 .dropdown:hover .arrow {
   transform: rotate(180deg);
 }
 
-/* show dropdown on hover */
+/* show dropdown */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-
-=======
->>>>>>> a9caa0ee92cb7bf652f3a53d31efd5c2e8a618cb
 /* map styles */
 .mapSection{
   width: min(1000px, 92vw);
@@ -143,7 +122,7 @@ nav > a:hover {
 
 .mapSubtitle{
   margin: 0 0 16px;
-  opacity: 0.85;
+  opacity: 0.85; 
 }
 
 .mapCard{
