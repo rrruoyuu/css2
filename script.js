@@ -50,10 +50,10 @@ const tip = document.getElementById("tip");
 
 if (pinsLayer && tip) {
   const pins = [
-    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 52, y: 34, url: "/China/china.html" },
-    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 78, y: 27, url: "/Korea/korea.html"},
-    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 91, y: 23, url: "/Japan/japan.html" },
-    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 58, y: 86, url: "/Singapore/singapore.html" },
+    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 52, y: 38, url: "/China/china.html" },
+    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 82, y: 27, url: "/Korea/korea.html"},
+    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 93, y: 23, url: "/Japan/japan.html" },
+    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 56, y: 86, url: "/Singapore/singapore.html" },
   ];
 
   function showTip(text) {
@@ -112,7 +112,7 @@ document.querySelectorAll(".voteBtn").forEach(button => {
   button.addEventListener("click", () => {
 
     if (hasVoted) {
-      alert("You already vote!");
+      alert("You already voted!");
       return;
     }
 
