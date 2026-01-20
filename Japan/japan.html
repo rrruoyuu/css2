@@ -8,12 +8,13 @@
   </head>
 
   <body>
+    <!-- ✅ Four Flavours header (kept) -->
     <div class="header-container">
-      <h1>Website Name</h1>
+      <h1>Four Flavours</h1>
     </div>
 
+    <!-- ✅ Main site navbar goes here (Home / Korean / Japanese / Singapore / Chinese) -->
     <div id="nav-container"></div>
-
     <main style="width: 800px; margin: 40px auto; text-align: left;">
       <h2>Japan</h2>
 
@@ -34,48 +35,96 @@
       <h3 class="choose-title">Choose a food to explore</h3>
 
       <div class="food-grid">
-
         <div class="food-card">
-        <a href="curryrice.html" class="food-link">
-            <img class="food-img" src="../images/curryrice.jpg" alt="Curry Rice">
+          <a href="curryrice.html" class="food-link">
+            <img class="food-img" src="../images/curryrice.jpg" alt="Curry Rice" />
             <p>Curry Rice</p>
-        </a>
+          </a>
         </div>
 
         <div class="food-card">
-            <a href="udon.html" class="food-link">
-            <img class="food-img" src="../images/udon.jpg" alt="Udon">
+          <a href="udon.html" class="food-link">
+            <img class="food-img" src="../images/udon.jpg" alt="Udon" />
             <p>Udon</p>
-            </a>
+          </a>
         </div>
 
         <div class="food-card">
-            <a href="misosoup.html" class="food-link">
-            <img class="food-img" src="../images/misosoup.jpg" alt="Miso Soup">
+          <a href="misosoup.html" class="food-link">
+            <img class="food-img" src="../images/misosoup.jpg" alt="Miso Soup" />
             <p>Miso Soup</p>
-            </a>
+          </a>
         </div>
 
         <div class="food-card">
-            <a href="takoyaki.html" class="food-link">
-            <img class="food-img" src="../images/takoyaki.jpeg" alt="Takoyaki">
+          <a href="takoyaki.html" class="food-link">
+            <img class="food-img" src="../images/takoyaki.jpeg" alt="Takoyaki" />
             <p>Takoyaki</p>
-            </a>
+          </a>
         </div>
 
         <div class="food-card">
-            <a href="okonomiyaki.html" class="food-link">
-            <img class="food-img" src="../images/okonomiyaki.jpg" alt="Okonomiyaki">
+          <a href="okonomiyaki.html" class="food-link">
+            <img class="food-img" src="../images/okonomiyaki.jpg" alt="Okonomiyaki" />
             <p>Okonomiyaki</p>
-            </a>
+          </a>
         </div>
+      </div>
 
+      <!-- Poll -->
+      <section>
+        <h2>Vote for your favourite food!</h2>
+
+        <div class="poll">
+          <div class="option" data-item="Curry Rice">
+            <div class="row">
+              <p>Curry Rice: <span class="percent">0%</span></p>
+              <div class="bar"><div class="fill"></div></div>
+              <button class="voteBtn">Vote</button>
+            </div>
+          </div>
+
+          <div class="option" data-item="Udon">
+            <div class="row">
+              <p>Udon: <span class="percent">0%</span></p>
+              <div class="bar"><div class="fill"></div></div>
+              <button class="voteBtn">Vote</button>
+            </div>
+          </div>
+
+          <div class="option" data-item="Miso Soup">
+            <div class="row">
+              <p>Miso Soup: <span class="percent">0%</span></p>
+              <div class="bar"><div class="fill"></div></div>
+              <button class="voteBtn">Vote</button>
+            </div>
+          </div>
+
+          <div class="option" data-item="Takoyaki">
+            <div class="row">
+              <p>Takoyaki: <span class="percent">0%</span></p>
+              <div class="bar"><div class="fill"></div></div>
+              <button class="voteBtn">Vote</button>
+            </div>
+          </div>
+
+          <div class="option" data-item="Okonomiyaki">
+            <div class="row">
+              <p>Okonomiyaki: <span class="percent">0%</span></p>
+              <div class="bar"><div class="fill"></div></div>
+              <button class="voteBtn">Vote</button>
+            </div>
+          </div>
         </div>
+      </section>
 
-
-      <a href="../index.html">← Back to Home</a>
+      <p><a href="../index.html">← Back to Home</a></p>
     </main>
 
+    <!-- Japan page JS (poll etc.) -->
+    <script src="script.js"></script>
+
+    <!-- Global JS (main navbar injection) -->
     <script src="../script.js" defer></script>
   </body>
 </html>

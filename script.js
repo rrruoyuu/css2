@@ -1,38 +1,3 @@
-//slider
-let currentIndex = 0;
-const slider = document.getElementById("slider");
-const slides = document.querySelectorAll(".slide");
-const totalSlides = slides.length;
-
-function updateSlide() {
-  slider.style.transform =
-    "translateX(-" + (currentIndex * 800) + "px)";
-}
-
-function nextSlide() {
-  currentIndex++;
-  if (currentIndex >= totalSlides) {
-    currentIndex = 0;
-  }
-  updateSlide();
-}
-
-function prevSlide() {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = totalSlides - 1;
-  }
-  updateSlide();
-}
-
-document.querySelectorAll(".nextBtn").forEach(btn => {
-  btn.addEventListener("click", nextSlide);
-});
-
-document.querySelectorAll(".prevBtn").forEach(btn => {
-  btn.addEventListener("click", prevSlide);
-});
-
 //nav-bar
 function createNavbar(targetId) {
   const navEl = document.createElement("nav");
@@ -182,10 +147,10 @@ const tip = document.getElementById("tip");
 
 if (pinsLayer && tip) {
   const pins = [
-    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 52, y: 34 },
-    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 78, y: 27 },
-    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 91, y: 23 },
-    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 62, y: 86 },
+    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 52, y: 38, url: "/China/china.html" },
+    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 82, y: 27, url: "/Korea/korea.html"},
+    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 93, y: 23, url: "/Japan/japan.html" },
+    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 56, y: 86, url: "/Singapore/singapore.html" },
   ];
 
   function showTip(text) {
@@ -218,6 +183,8 @@ if (pinsLayer && tip) {
         ],
         { duration: 280, easing: "ease-out" }
       );
+      // Navigate to the page
+      window.location.href = p.url;  // <-- this line makes it go to another page
     });
 
     return btn;

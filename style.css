@@ -13,6 +13,7 @@ h1{
 nav {
   background-color: #ecb954;
   display: flex;
+<<<<<<< HEAD
   gap: 24px;
   align-items: center;
   position: relative;
@@ -38,6 +39,24 @@ nav a {
 nav a:hover {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 6px;
+=======
+  position: sticky;
+}
+
+nav > a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  position: sticky;
+}
+
+nav > a:hover {
+  background-color: white;
+  color: black;
+  position: sticky;
+>>>>>>> a9caa0ee92cb7bf652f3a53d31efd5c2e8a618cb
 }
 
 .header-container{
@@ -47,8 +66,10 @@ nav a:hover {
     display: flex;
     justify-content: left;
     padding: 14px 16px;
+    position: sticky;
 }
 
+<<<<<<< HEAD
 /* ===================== DROPDOWN NAV ===================== */
 
 /* wrapper */
@@ -107,6 +128,8 @@ nav a:hover {
 }
 
 
+=======
+>>>>>>> a9caa0ee92cb7bf652f3a53d31efd5c2e8a618cb
 /* map styles */
 .mapSection{
   width: min(1000px, 92vw);
