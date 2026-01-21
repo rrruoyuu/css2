@@ -8,29 +8,34 @@
   </head>
 
   <body>
-    <!-- ✅ Four Flavours header (kept) -->
+    <!-- Four Flavours header -->
     <div class="header-container">
       <h1>Four Flavours</h1>
     </div>
 
-    <!-- ✅ Main site navbar goes here (Home / Korean / Japanese / Singapore / Chinese) -->
+    <!-- Main site navbar injected by ../script.js -->
     <div id="nav-container"></div>
-    <main style="width: 800px; margin: 40px auto; text-align: left;">
+
+    <main class="cuisine" style="width: 800px; margin: 40px auto; text-align: left;">
       <h2>Japan</h2>
 
+      <!-- Keep your Japan hero image style -->
       <img class="hero-img" src="../images/japfood.jpg" alt="Japanese food" />
 
-      <p>
-        Japanese food is known for its simplicity, freshness, and balance of flavors. Meals often focus
-        on natural ingredients like rice, fish, vegetables, and soy-based foods, with an emphasis on
-        presentation and seasonal produce. Popular dishes such as sushi, ramen, and tempura highlight
-        careful preparation and respect for ingredients, making Japanese cuisine both comforting and refined.
-      </p>
+      <!-- ✅ Grey box (same as Korea/China) -->
+      <div class="desc">
+        <p>
+          Japanese food is known for its simplicity, freshness, and balance of flavors. Meals often focus
+          on natural ingredients like rice, fish, vegetables, and soy-based foods, with an emphasis on
+          presentation and seasonal produce. Popular dishes such as sushi, ramen, and tempura highlight
+          careful preparation and respect for ingredients, making Japanese cuisine both comforting and refined.
+        </p>
 
-      <p>
-        In this blog, we will dive into the history of Japanese cuisine and provide easy to follow recipes
-        for some Japanese cuisine.
-      </p>
+        <p>
+          In this blog, we will dive into the history of Japanese cuisine and provide easy to follow recipes
+          for some Japanese cuisine.
+        </p>
+      </div>
 
       <h3 class="choose-title">Choose a food to explore</h3>
 
@@ -124,7 +129,7 @@
     <!-- Japan page JS (poll etc.) -->
     <script src="script.js"></script>
 
-    <!-- Global JS (main navbar injection) -->
+    <!-- Global JS (navbar injection etc.) -->
     <script src="../script.js" defer></script>
   </body>
 </html>

@@ -89,3 +89,26 @@
   font-weight: bold;
   text-decoration: underline;
 }
+.cuisine {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Make the grey box fit inside your 800px main without overflow */
+.cuisine .desc {
+  width: 100%;
+  max-width: 855px;
+  margin: 18px auto;       /* centers the grey box */
+  text-align: left;
+  line-height: 1.5;
+  font-size: 18px;
+  background-color: #f8f8f8;
+  padding: 18px 22px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+.cuisine .desc p {
+  margin: 0 0 18px 0;
+}
