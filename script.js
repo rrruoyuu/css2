@@ -20,11 +20,11 @@ function createNavbar(targetId) {
   kMenu.className = "dropdown-content";
 
   const kFoods = [
-    { name: "Bibim", link: "bibim.html" },
+    { name: "Bibimbap", link: "bibim.html" },
     { name: "Gimbap", link: "gimbap.html" },
-    { name: "Jeon", link: "jeon.html" },
-    { name: "Jjajang", link: "jjajang.html" },
-    { name: "Tteok", link: "tteok.html" }
+    { name: "Kimchi Jeon", link: "jeon.html" },
+    { name: "Jjajangmyeon", link: "jjajang.html" },
+    { name: "Tteokbokki", link: "tteok.html" }
   ];
 
   kFoods.forEach(food => {
@@ -44,7 +44,7 @@ function createNavbar(targetId) {
   const jpToggle = document.createElement("a");
   jpToggle.className = "dropdown-toggle";
   jpToggle.href = "../Japan/japan.html";
-  jpToggle.innerHTML = `Japanese <span class="arrow">▼</span>`;
+  jpToggle.innerHTML = `Japan <span class="arrow">▼</span>`;
 
   const jpMenu = document.createElement("div");
   jpMenu.className = "dropdown-content";
@@ -147,10 +147,10 @@ const tip = document.getElementById("tip");
 
 if (pinsLayer && tip) {
   const pins = [
-    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 52, y: 38, url: "/China/china.html" },
-    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 82, y: 27, url: "/Korea/korea.html"},
-    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 93, y: 23, url: "/Japan/japan.html" },
-    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 56, y: 86, url: "/Singapore/singapore.html" },
+    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 44, y: 33, url: "/China/china.html" },
+    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 63, y: 29, url: "/Korea/korea.html"},
+    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 71, y: 29, url: "/Japan/japan.html" },
+    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 50, y: 79, url: "/Singapore/singapore.html" },
   ];
 
   function showTip(text) {
