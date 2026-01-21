@@ -17,9 +17,6 @@ nav {
   display: flex;
   gap: 24px;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 /* nav links */
@@ -49,6 +46,12 @@ nav a:hover {
   display: flex;
   align-items: center;
   padding: 14px 16px;
+}
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* ===================== DROPDOWN ===================== */

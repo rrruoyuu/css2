@@ -110,7 +110,7 @@ function createNavbar(targetId) {
   cMenu.className = "dropdown-content";
 
   const cFoods = [
-    { name: "Atea", link: "atea.html" },
+    { name: "Tea", link: "atea.html" },
     { name: "Xiao Long Bao", link: "axiaolongbao.html" },
     { name: "Hotpot", link: "hotpot.html" },
     { name: "Mala", link: "mala.html" },

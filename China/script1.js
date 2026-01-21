@@ -1,50 +1,141 @@
-// ===================== CHINESE CUISINE NAV BAR =====================
 function createNavbar(targetId) {
-
   const navEl = document.createElement("nav");
 
+  /* HOME */
   const homeNavItem = document.createElement("a");
-  homeNavItem.href = "china.html"; 
-  homeNavItem.appendChild(document.createTextNode("Chinese Cuisine"));
+  homeNavItem.href = "../index.html";
+  homeNavItem.textContent = "Home";
 
-  // create nav item for Peking Duck
-  const duckNavItem = document.createElement("a");
-  duckNavItem.href = "pekingduck.html";
-  duckNavItem.appendChild(document.createTextNode("Peking Duck"));
+  /* ===== KOREA ===== */
+  const kDropdown = document.createElement("div");
+  kDropdown.className = "dropdown";
 
-  // create nav item for Mala
-  const malaNavItem = document.createElement("a");
-  malaNavItem.href = "mala.html";
-  malaNavItem.appendChild(document.createTextNode("Mala"));
+  const kToggle = document.createElement("a");
+  kToggle.className = "dropdown-toggle";
+  kToggle.href = "../Korea/korea.html";
+  kToggle.innerHTML = `Korea <span class="arrow">▼</span>`;
 
-  // create nav item for HotPot
-  const hotpotNavItem = document.createElement("a");
-  hotpotNavItem.href = "hotpot.html";
-  hotpotNavItem.appendChild(document.createTextNode("HotPot"));
+  const kMenu = document.createElement("div");
+  kMenu.className = "dropdown-content";
 
-  // create nav item for Tea
-  const teaNavItem = document.createElement("a");
-  teaNavItem.href = "atea.html";
-  teaNavItem.appendChild(document.createTextNode("Tea"));
+  const kFoods = [
+    { name: "Bibim", link: "bibim.html" },
+    { name: "Gimbap", link: "gimbap.html" },
+    { name: "Jeon", link: "jeon.html" },
+    { name: "Jjajang", link: "jjajang.html" },
+    { name: "Tteok", link: "tteok.html" }
+  ];
 
-  // create nav item for XiaoLongBao
-  const xlbNavItem = document.createElement("a");
-  xlbNavItem.href = "axiaolongbao.html";
-  xlbNavItem.appendChild(document.createTextNode("XiaoLongBao"));
+  kFoods.forEach(food => {
+    const a = document.createElement("a");
+    a.href = `../Korea/${food.link}`;
+    a.textContent = food.name;
+    kMenu.appendChild(a);
+  });
 
-  // ===================== APPEND ALL NAV ITEMS =====================
+  kDropdown.appendChild(kToggle);
+  kDropdown.appendChild(kMenu);
+
+  /* ===== JAPAN ===== */
+  const jpDropdown = document.createElement("div");
+  jpDropdown.className = "dropdown";
+
+  const jpToggle = document.createElement("a");
+  jpToggle.className = "dropdown-toggle";
+  jpToggle.href = "../Japan/japan.html";
+  jpToggle.innerHTML = `Japanese <span class="arrow">▼</span>`;
+
+  const jpMenu = document.createElement("div");
+  jpMenu.className = "dropdown-content";
+
+  const jpFoods = [
+    { name: "Curry Rice", link: "curryrice.html" },
+    { name: "Miso Soup", link: "misosoup.html" },
+    { name: "Okonomiyaki", link: "okonomiyaki.html" },
+    { name: "Takoyaki", link: "takoyaki.html" },
+    { name: "Udon", link: "udon.html" }
+  ];
+
+  jpFoods.forEach(food => {
+    const a = document.createElement("a");
+    a.href = `../Japan/${food.link}`;
+    a.textContent = food.name;
+    jpMenu.appendChild(a);
+  });
+
+  jpDropdown.appendChild(jpToggle);
+  jpDropdown.appendChild(jpMenu);
+
+  /* ===== SINGAPORE ===== */
+  const sgDropdown = document.createElement("div");
+  sgDropdown.className = "dropdown";
+
+  const sgToggle = document.createElement("a");
+  sgToggle.className = "dropdown-toggle";
+  sgToggle.href = "../Singapore/singapore.html";
+  sgToggle.innerHTML = `Singapore <span class="arrow">▼</span>`;
+
+  const sgMenu = document.createElement("div");
+  sgMenu.className = "dropdown-content";
+
+  const sgFoods = [
+    { name: "Chicken Rice", link: "chicken-rice.html" },
+    { name: "Laksa", link: "laksa.html" },
+    { name: "Chilli Crab", link: "chilli-crab.html" },
+    { name: "Nasi Lemak", link: "nasi-lemak.html" },
+    { name: "Roti Prata", link: "roti-prata.html" }
+  ];
+
+  sgFoods.forEach(food => {
+    const a = document.createElement("a");
+    a.href = `../Singapore/${food.link}`;
+    a.textContent = food.name;
+    sgMenu.appendChild(a);
+  });
+
+  sgDropdown.appendChild(sgToggle);
+  sgDropdown.appendChild(sgMenu);
+
+  /* ===== CHINA ===== */
+  const cDropdown = document.createElement("div");
+  cDropdown.className = "dropdown";
+
+  const cToggle = document.createElement("a");
+  cToggle.className = "dropdown-toggle";
+  cToggle.href = "../China/china.html";
+  cToggle.innerHTML = `China <span class="arrow">▼</span>`;
+
+  const cMenu = document.createElement("div");
+  cMenu.className = "dropdown-content";
+
+  const cFoods = [
+    { name: "Tea", link: "atea.html" },
+    { name: "Xiao Long Bao", link: "axiaolongbao.html" },
+    { name: "Hotpot", link: "hotpot.html" },
+    { name: "Mala", link: "mala.html" },
+    { name: "Peking Duck", link: "pekingduck.html" }
+  ];
+
+  cFoods.forEach(food => {
+    const a = document.createElement("a");
+    a.href = `../China/${food.link}`;
+    a.textContent = food.name;
+    cMenu.appendChild(a);
+  });
+
+  cDropdown.appendChild(cToggle);
+  cDropdown.appendChild(cMenu);
+
+  /* ===== APPEND ALL ===== */
   navEl.appendChild(homeNavItem);
-  navEl.appendChild(duckNavItem);
-  navEl.appendChild(malaNavItem);
-  navEl.appendChild(hotpotNavItem);
-  navEl.appendChild(teaNavItem);
-  navEl.appendChild(xlbNavItem);
+  navEl.appendChild(kDropdown);
+  navEl.appendChild(jpDropdown);
+  navEl.appendChild(sgDropdown);
+  navEl.appendChild(cDropdown);
 
-  // insert navbar into target container
   document.querySelector(targetId).appendChild(navEl);
 }
 
-// call function
 createNavbar("#nav-container");
 
 
