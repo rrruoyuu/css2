@@ -1,9 +1,21 @@
+// nav-bar
 function createNavbar(targetId) {
   const navEl = document.createElement("nav");
 
+  // If current page is inside a folder (China/, Korea/, Japan/, Singapore/),
+  // then we need to go up one level to reach index.html and other folders.
+  const path = window.location.pathname; // e.g. /CSS2/China/china.html
+  const inSubfolder =
+    path.includes("/China/") ||
+    path.includes("/Korea/") ||
+    path.includes("/Japan/") ||
+    path.includes("/Singapore/");
+
+  const base = inSubfolder ? "../" : "./"; // "../" from country pages, "./" from home
+
   /* HOME */
   const homeNavItem = document.createElement("a");
-  homeNavItem.href = "../index.html";
+  homeNavItem.href = `${base}index.html`;
   homeNavItem.textContent = "Home";
 
   /* ===== KOREA ===== */
@@ -12,23 +24,23 @@ function createNavbar(targetId) {
 
   const kToggle = document.createElement("a");
   kToggle.className = "dropdown-toggle";
-  kToggle.href = "../Korea/korea.html";
+  kToggle.href = `${base}Korea/korea.html`;
   kToggle.innerHTML = `Korea <span class="arrow">▼</span>`;
 
   const kMenu = document.createElement("div");
   kMenu.className = "dropdown-content";
 
   const kFoods = [
-    { name: "Bibim", link: "bibim.html" },
+    { name: "Bibimbap", link: "bibim.html" },
     { name: "Gimbap", link: "gimbap.html" },
-    { name: "Jeon", link: "jeon.html" },
-    { name: "Jjajang", link: "jjajang.html" },
-    { name: "Tteok", link: "tteok.html" }
+    { name: "Kimchi Jeon", link: "jeon.html" },
+    { name: "Jjajangmyeon", link: "jjajang.html" },
+    { name: "Tteokbokki", link: "tteok.html" }
   ];
 
   kFoods.forEach(food => {
     const a = document.createElement("a");
-    a.href = `../Korea/${food.link}`;
+    a.href = `${base}Korea/${food.link}`;
     a.textContent = food.name;
     kMenu.appendChild(a);
   });
@@ -42,8 +54,8 @@ function createNavbar(targetId) {
 
   const jpToggle = document.createElement("a");
   jpToggle.className = "dropdown-toggle";
-  jpToggle.href = "../Japan/japan.html";
-  jpToggle.innerHTML = `Japanese <span class="arrow">▼</span>`;
+  jpToggle.href = `${base}Japan/japan.html`;
+  jpToggle.innerHTML = `Japan <span class="arrow">▼</span>`;
 
   const jpMenu = document.createElement("div");
   jpMenu.className = "dropdown-content";
@@ -58,7 +70,7 @@ function createNavbar(targetId) {
 
   jpFoods.forEach(food => {
     const a = document.createElement("a");
-    a.href = `../Japan/${food.link}`;
+    a.href = `${base}Japan/${food.link}`;
     a.textContent = food.name;
     jpMenu.appendChild(a);
   });
@@ -72,7 +84,7 @@ function createNavbar(targetId) {
 
   const sgToggle = document.createElement("a");
   sgToggle.className = "dropdown-toggle";
-  sgToggle.href = "../Singapore/singapore.html";
+  sgToggle.href = `${base}Singapore/singapore.html`;
   sgToggle.innerHTML = `Singapore <span class="arrow">▼</span>`;
 
   const sgMenu = document.createElement("div");
@@ -88,7 +100,7 @@ function createNavbar(targetId) {
 
   sgFoods.forEach(food => {
     const a = document.createElement("a");
-    a.href = `../Singapore/${food.link}`;
+    a.href = `${base}Singapore/${food.link}`;
     a.textContent = food.name;
     sgMenu.appendChild(a);
   });
@@ -102,7 +114,7 @@ function createNavbar(targetId) {
 
   const cToggle = document.createElement("a");
   cToggle.className = "dropdown-toggle";
-  cToggle.href = "../China/china.html";
+  cToggle.href = `${base}China/china.html`;
   cToggle.innerHTML = `China <span class="arrow">▼</span>`;
 
   const cMenu = document.createElement("div");
@@ -118,7 +130,7 @@ function createNavbar(targetId) {
 
   cFoods.forEach(food => {
     const a = document.createElement("a");
-    a.href = `../China/${food.link}`;
+    a.href = `${base}China/${food.link}`;
     a.textContent = food.name;
     cMenu.appendChild(a);
   });
@@ -134,9 +146,17 @@ function createNavbar(targetId) {
   navEl.appendChild(cDropdown);
 
   document.querySelector(targetId).appendChild(navEl);
+
+  homeNavItem.addEventListener("click", (e) => {
+    const current = window.location.pathname;
+    if (current.endsWith("/index.html") || current.endsWith("/")) {
+      e.preventDefault(); // stays on home, no error
+    }
+  });
 }
 
 createNavbar("#nav-container");
+
 
 
 function toggleDesc(button) {

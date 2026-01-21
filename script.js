@@ -1,10 +1,19 @@
-//nav-bar
+// nav-bar
 function createNavbar(targetId) {
   const navEl = document.createElement("nav");
 
+  const path = window.location.pathname; 
+  const inSubfolder =
+    path.includes("/China/") ||
+    path.includes("/Korea/") ||
+    path.includes("/Japan/") ||
+    path.includes("/Singapore/");
+
+  const base = inSubfolder ? "../" : "./"; 
+
   /* HOME */
   const homeNavItem = document.createElement("a");
-  homeNavItem.href = "../index.html";
+  homeNavItem.href = `${base}index.html`;
   homeNavItem.textContent = "Home";
 
   /* ===== KOREA ===== */
@@ -13,7 +22,7 @@ function createNavbar(targetId) {
 
   const kToggle = document.createElement("a");
   kToggle.className = "dropdown-toggle";
-  kToggle.href = "../Korea/korea.html";
+  kToggle.href = `${base}Korea/korea.html`;
   kToggle.innerHTML = `Korea <span class="arrow">▼</span>`;
 
   const kMenu = document.createElement("div");
@@ -29,7 +38,7 @@ function createNavbar(targetId) {
 
   kFoods.forEach(food => {
     const a = document.createElement("a");
-    a.href = `../Korea/${food.link}`;
+    a.href = `${base}Korea/${food.link}`;
     a.textContent = food.name;
     kMenu.appendChild(a);
   });
@@ -43,7 +52,7 @@ function createNavbar(targetId) {
 
   const jpToggle = document.createElement("a");
   jpToggle.className = "dropdown-toggle";
-  jpToggle.href = "../Japan/japan.html";
+  jpToggle.href = `${base}Japan/japan.html`;
   jpToggle.innerHTML = `Japan <span class="arrow">▼</span>`;
 
   const jpMenu = document.createElement("div");
@@ -59,7 +68,7 @@ function createNavbar(targetId) {
 
   jpFoods.forEach(food => {
     const a = document.createElement("a");
-    a.href = `../Japan/${food.link}`;
+    a.href = `${base}Japan/${food.link}`;
     a.textContent = food.name;
     jpMenu.appendChild(a);
   });
@@ -73,7 +82,7 @@ function createNavbar(targetId) {
 
   const sgToggle = document.createElement("a");
   sgToggle.className = "dropdown-toggle";
-  sgToggle.href = "../Singapore/singapore.html";
+  sgToggle.href = `${base}Singapore/singapore.html`;
   sgToggle.innerHTML = `Singapore <span class="arrow">▼</span>`;
 
   const sgMenu = document.createElement("div");
@@ -89,7 +98,7 @@ function createNavbar(targetId) {
 
   sgFoods.forEach(food => {
     const a = document.createElement("a");
-    a.href = `../Singapore/${food.link}`;
+    a.href = `${base}Singapore/${food.link}`;
     a.textContent = food.name;
     sgMenu.appendChild(a);
   });
@@ -103,7 +112,7 @@ function createNavbar(targetId) {
 
   const cToggle = document.createElement("a");
   cToggle.className = "dropdown-toggle";
-  cToggle.href = "../China/china.html";
+  cToggle.href = `${base}China/china.html`;
   cToggle.innerHTML = `China <span class="arrow">▼</span>`;
 
   const cMenu = document.createElement("div");
@@ -119,7 +128,7 @@ function createNavbar(targetId) {
 
   cFoods.forEach(food => {
     const a = document.createElement("a");
-    a.href = `../China/${food.link}`;
+    a.href = `${base}China/${food.link}`;
     a.textContent = food.name;
     cMenu.appendChild(a);
   });
@@ -135,9 +144,17 @@ function createNavbar(targetId) {
   navEl.appendChild(cDropdown);
 
   document.querySelector(targetId).appendChild(navEl);
+
+  homeNavItem.addEventListener("click", (e) => {
+    const current = window.location.pathname;
+    if (current.endsWith("/index.html") || current.endsWith("/")) {
+      e.preventDefault(); 
+    }
+  });
 }
 
 createNavbar("#nav-container");
+
 
 
 // map 
@@ -147,10 +164,10 @@ const tip = document.getElementById("tip");
 
 if (pinsLayer && tip) {
   const pins = [
-    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 44, y: 33, url: "/China/china.html" },
-    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 63, y: 29, url: "/Korea/korea.html"},
-    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 71, y: 29, url: "/Japan/japan.html" },
-    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 50, y: 79, url: "/Singapore/singapore.html" },
+    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 44, y: 33, url: "China/china.html" },
+    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 63, y: 29, url: "Korea/korea.html"},
+    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 71, y: 29, url: "Japan/japan.html" },
+    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 50, y: 79, url: "Singapore/singapore.html" },
   ];
 
   function showTip(text) {
