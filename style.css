@@ -10,36 +10,103 @@ h1{
     margin: 0px;
 }
 /*nav bar*/
+/* ===================== NAV BAR ===================== */
+
 nav {
   background-color: #ecb954;
-  overflow: hidden;
   display: flex;
+  gap: 24px;
+  align-items: center;
   position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-nav > a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  position: sticky;
-}
-
-nav > a:hover {
-  background-color: white;
+/* nav links */
+nav a,
+nav a:visited {
   color: black;
-  position: sticky;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.header-container{
-    background-color: #ecb954;
-    height: 20px;
-    text-align: left;
-    display: flex;
-    justify-content: left;
-    padding: 14px 16px;
-    position: sticky;
+/* spacing */
+nav a {
+  padding: 12px 18px;
+  display: inline-block;
+}
+
+/* hover effect */
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+/* ===================== HEADER ===================== */
+
+.header-container {
+  background-color: #ecb954;
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+}
+
+/* ===================== DROPDOWN ===================== */
+
+/* wrapper */
+.dropdown {
+  position: relative; /* ⭐ REQUIRED */
+}
+
+/* toggle link */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;      /* below the tab */
+  left: 0;
+  background: white;
+  min-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+  z-index: 999;
+}
+
+/* dropdown links */
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {
+  background-color: #ecb954;
+}
+
+/* arrow */
+.arrow {
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+/* rotate arrow */
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* show dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* map styles */
@@ -55,7 +122,7 @@ nav > a:hover {
 
 .mapSubtitle{
   margin: 0 0 16px;
-  opacity: 0.85;
+  opacity: 0.85; 
 }
 
 .mapCard{
