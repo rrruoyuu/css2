@@ -164,10 +164,10 @@ const tip = document.getElementById("tip");
 
 if (pinsLayer && tip) {
   const pins = [
-    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 44, y: 33, url: "China/china.html" },
-    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 63, y: 29, url: "Korea/korea.html"},
-    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 71, y: 29, url: "Japan/japan.html" },
-    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 50, y: 79, url: "Singapore/singapore.html" },
+    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 46, y: 29, url: "China/china.html" },
+    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 69, y: 23, url: "Korea/korea.html"},
+    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 81, y: 28, url: "Japan/japan.html" },
+    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 45, y: 77, url: "Singapore/singapore.html" },
   ];
 
   function showTip(text) {
@@ -208,46 +208,4 @@ if (pinsLayer && tip) {
   }
 
   pins.forEach(p => pinsLayer.appendChild(makePin(p)));
-}
-
-//poll
-const options=document.querySelectorAll(".option");
-
-let votes={};
-let totalVotes=0;
-let hasVoted=false;
-
-options.forEach(option=>{
-  const item=option.dataset.item;
-  votes[item]=0;
-});
-
-document.querySelectorAll(".voteBtn").forEach(button => {
-  button.addEventListener("click", () => {
-
-    if (hasVoted) {
-      alert("You already voted!");
-      return;
-    }
-
-    const option = button.closest(".option");
-    const item = option.dataset.item;
-
-    votes[item]++;
-    totalVotes++;
-    hasVoted = true;
-
-    updateResults();
-  });
-});
-
-function updateResults() {
-  options.forEach(option => {
-    const item = option.dataset.item;
-    const percent = (votes[item] / totalVotes) * 100;
-
-    option.querySelector(".fill").style.width = percent + "%";
-    option.querySelector(".percent").textContent =
-      percent.toFixed(0) + "%";
-  });
 }

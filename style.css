@@ -227,66 +227,85 @@ nav a:hover {
   transform: translateY(0);
 }
 
-/*Poll*/
+
+
+/* ===== Poll wrapper centered ===== */
 .poll {
-  width: 400px;
-  margin: 40px auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;      /* center the whole poll block */
+  gap: 22px;
+  margin-top: 20px;
 }
 
-/*Each option*/
-.option {
-  margin-bottom: 25px;
+/* Each option row becomes a 3-column layout:
+   left label, middle bar, right button */
+.poll .option {
+  width: 100%;
+  max-width: 560px;         /* control how wide the poll looks */
 }
 
-/*Row*/
-.row {
-  display: flex;
+/* Make the row look like your screenshot */
+.poll .option .row {
+  display: grid;
+  grid-template-columns: 150px 1fr 90px; /* label | bar | button */
   align-items: center;
-  gap: 15px;
+  column-gap: 22px;
 }
 
-/*Text*/
-.row p {
-  width: 120px;
+/* Left label area (name + percent under it) */
+.poll .option .row p {
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.1;
+  text-align: left;
 }
 
-/*Bar bg*/
-.bar {
-  flex: 1;
-  height: 16px;
-  background-color: #ddd;
-  border-radius: 8px;
+/* Make the percent drop to next line under the name */
+.poll .option .row p .percent {
+  display: block;           /* forces new line */
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Bar style */
+.poll .bar {
+  width: 100%;
+  height: 18px;
+  background: #d9d9d9;
+  border-radius: 999px;
   overflow: hidden;
 }
 
-/*% bar*/
-.fill {
+/* Fill style */
+.poll .fill {
   height: 100%;
   width: 0%;
-  background-color: #ecb954;
-  transition: width 0.5s ease;
+  background: #f0c15c;      /* your yellow */
+  border-radius: 999px;
 }
 
-/*VoteBtn*/
- .voteBtn { 
-  padding: 6px 14px;
-  background-color: #ecb954;
-  border: none; cursor: pointer;
-  border-radius: 4px; 
-} 
-
-.voteBtn:hover { 
-  background-color: #d9a63c; 
+/* Vote button style */
+.poll .voteBtn {
+  width: 70px;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  background: #f0c15c;
+  color: #8a5a00;
+  font-weight: 700;
+  cursor: pointer;
 }
- /*% text*/ 
- .percent{
-   font-size: 14px;
-   margin-left: 5px; 
-  }
+
+.poll .voteBtn:hover {
+  filter: brightness(0.95);
+}
+
+
+
 
   .food-explore ul {
     display: flex;
@@ -333,4 +352,85 @@ nav a:hover {
     transform: scale(0.95);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     filter: brightness(0.9);
+}
+
+/* ===== POLL (FINAL) ===== */
+
+/* Center the title text only */
+section h2 {
+  text-align: center;
+}
+
+/* Center the poll block */
+.poll {
+  width: min(560px, 92vw);
+  margin: 24px auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: stretch; /* keep rows same width */
+}
+
+/* Each option row */
+.poll .option {
+  width: 100%;
+}
+
+/* 3-column layout like your screenshot */
+.poll .option .row {
+  display: grid;
+  grid-template-columns: 170px 1fr auto; /* left text | bar | button */
+  align-items: center;
+  column-gap: 22px;
+}
+
+/* Left label (name + percent under) */
+.poll .option .row p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.1;
+  text-align: left; /* important */
+}
+
+/* percent goes under the name */
+.poll .option .row p .percent {
+  display: block;
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Bar */
+.poll .bar {
+  width: 100%;
+  height: 18px;
+  background: #d9d9d9;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Fill */
+.poll .fill {
+  height: 100%;
+  width: 0%;
+  background: #ecb954;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+/* Button */
+.poll .voteBtn {
+  width: 70px;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  background: #ecb954;
+  color: #8a5a00;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.poll .voteBtn:hover {
+  background: #d9a63c;
 }
