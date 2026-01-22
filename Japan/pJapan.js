@@ -101,6 +101,8 @@ document.body.appendChild(totalText);
 
   if (hasVoted) {
     setButtonsEnabled(false);
+    voteBtns.forEach(b => b.classList.add("voted"));
+    voteBtns.forEach(b => {b.textContent = "Voted";});
     showMessage("Thankyou For Your Voting!");
   }
 
@@ -125,6 +127,8 @@ document.body.appendChild(totalText);
       sessionStorage.setItem(LOCK_KEY, "1");
 
       setButtonsEnabled(false);
+      voteBtns.forEach(b => b.classList.add("voted"));
+      voteBtns.forEach(b => {b.textContent = "Voted";});
       showMessage("Thankyou For Your Voting!");
     });
   });

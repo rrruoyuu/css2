@@ -1,4 +1,27 @@
 /*body*/
+/*If want to change*/
+/*body{
+  font-family: "Open Sans", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.5px;
+   margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+nav, nav a {
+  font-family: "Inter", "Open Sans", sans-serif;
+  font-weight: 500;
+}
+*/
+
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -9,6 +32,8 @@ body{
 h1{
     margin: 0px;
 }
+
+
 /*nav bar*/
 /* ===================== NAV BAR ===================== */
 
@@ -444,4 +469,11 @@ section h2 {
 
 .poll .voteBtn:hover {
   background: #d9a63c;
+}
+
+.voteBtn.voted {
+  background-color: #ecb954;   /* darker color */
+  color: #8a5a00;
+  opacity: 0.8;
+  cursor: not-allowed;
 }
