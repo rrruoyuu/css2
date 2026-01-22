@@ -34,10 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
   totalText.style.textAlign = "center";
   totalText.style.width = "100%";
 
-  if (pollTitle) {
-    pollTitle.insertAdjacentElement("afterend", msg);
-    msg.insertAdjacentElement("afterend", totalText);
-  }
+   if (pollTitle) {
+  pollTitle.insertAdjacentElement("afterend", msg);
+}
+document.body.appendChild(totalText);
+
 
   function showMessage(text, color = "#d19a2a") {
     msg.textContent = text;

@@ -39,9 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
   totalText.textContent = "Total votes: 0";
 
   if (pollTitle) {
-    pollTitle.insertAdjacentElement("afterend", msg);
-    msg.insertAdjacentElement("afterend", totalText);
-  }
+  pollTitle.insertAdjacentElement("afterend", msg);
+}
+document.body.appendChild(totalText);
+
 
   function showMessage(text, color = "#d19a2a") {
     msg.textContent = text;
