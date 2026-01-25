@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setButtonsEnabled(false);
       voteBtns.forEach(b => b.classList.add("voted"));
       voteBtns.forEach(b => {b.textContent = "Voted";});
-      showMessage("Thankyou For Your Voting!");
+      showMessage("Thank you for your vote!");
     });
   });
 });
