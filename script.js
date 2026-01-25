@@ -164,10 +164,10 @@ const tip = document.getElementById("tip");
 
 if (pinsLayer && tip) {
   const pins = [
-    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 46, y: 29, url: "China/china.html" },
-    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 69, y: 23, url: "Korea/korea.html"},
-    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 81, y: 28, url: "Japan/japan.html" },
-    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 45, y: 77, url: "Singapore/singapore.html" },
+    { name: "China",       flag: "🇨🇳", color: "#e53935", x: 43, y: 27, url: "China/china.html" },
+    { name: "South Korea", flag: "🇰🇷", color: "#1e88e5", x: 78, y: 21, url: "Korea/korea.html"},
+    { name: "Japan",       flag: "🇯🇵", color: "#43a047", x: 94, y: 27, url: "Japan/japan.html" },
+    { name: "Singapore",   flag: "🇸🇬", color: "#8e24aa", x: 45, y: 79, url: "Singapore/singapore.html" },
   ];
 
   function showTip(text) {

@@ -171,3 +171,18 @@ function toggleDesc(button) {
         button.textContent = "View less";
     }
 }
+
+// ===== simple scroll reveal =====
+document.addEventListener("DOMContentLoaded", () => {
+  // add reveal class to sections you want animated
+  const targets = document.querySelectorAll(".desc, .back-home");
+  targets.forEach(el => el.classList.add("reveal"));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("show");
+    });
+  }, { threshold: 0.12 });
+
+  targets.forEach(el => io.observe(el));
+});
