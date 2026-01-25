@@ -78,26 +78,39 @@ nav a:hover {
   top: 0;
   z-index: 1000;
 }
+/* ===== TEXT BOX (same as Korea) ===== */
+.cuisine .desc {
+  width: min(855px, 92vw);
+  margin: 40px auto 0;
 
-.description{
-  width: 100%;
-  max-width: 900px; 
-  margin: 0 auto;
-  width: 855px;         
-  text-align: left;   
-  line-height: 1.5;
-  font-size: 18px;  
-  background-color: #f8f8f8;
-  padding: 18px 22px;
-  border-radius: 12px;
-  border: 1px solid #e0e0e0;  
+  text-align: left;
+  line-height: 1.7;
+  font-size: 18px;
+
+  background: linear-gradient(180deg, #fff 0%, #f8f8f8 100%);
+  padding: 20px 24px;
+  border-radius: 16px;
+
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.08);
+
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.cuisine .desc:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.10);
+}
+
+.cuisine .desc p {
+  margin: 0 0 18px;
 }
 
 /* ===================== DROPDOWN ===================== */
 
 /* wrapper */
 .dropdown {
-  position: relative; /* ⭐ REQUIRED */
+  position: relative; 
 }
 
 /* toggle link */
@@ -112,7 +125,7 @@ nav a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;      /* below the tab */
+  top: 100%;    
   left: 0;
   background: white;
   min-width: 180px;
@@ -176,23 +189,24 @@ nav a:hover {
 
 .mapWrap{
   position: relative;
-  width: 100%;
+  width: min(700px, 100%);  
+  margin: 20px auto;      
   border-radius: 14px;
   overflow: hidden;
 }
 
 .mapImg{
-  width: 100%;
+  width: 100%;             
   height: auto;
-  max-width: 700px;
   display: block;
-  margin: 20px auto;
+  margin: 0;                 
+  max-width: none;          
 }
 
 .pinsLayer{
   position: absolute;
-  inset: 0;
-  pointer-events: auto;
+  inset: 0;           
+  pointer-events: none;    
 }
 
 /* Pin button */
@@ -205,7 +219,7 @@ nav a:hover {
   background: transparent;
   cursor: pointer;
   filter: drop-shadow(0 10px 12px rgba(0,0,0,.25));
-  pointer-events: auto;
+  pointer-events: auto;    
 }
 
 .pin .head{
