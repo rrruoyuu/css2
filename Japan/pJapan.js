@@ -103,13 +103,13 @@ document.body.appendChild(totalText);
     setButtonsEnabled(false);
     voteBtns.forEach(b => b.classList.add("voted"));
     voteBtns.forEach(b => {b.textContent = "Voted";});
-    showMessage("Thankyou For Your Voting!");
+    showMessage("Thank you for your vote!");
   }
 
   voteBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       if (hasVoted) {
-        alert("Thankyou For Your Voting!");
+        alert("Thank you for your vote!");
         return;
       }
 
@@ -129,7 +129,7 @@ document.body.appendChild(totalText);
       setButtonsEnabled(false);
       voteBtns.forEach(b => b.classList.add("voted"));
       voteBtns.forEach(b => {b.textContent = "Voted";});
-      showMessage("Thankyou For Your Voting!");
+      showMessage("Thank you for your vote!");
     });
   });
 });
