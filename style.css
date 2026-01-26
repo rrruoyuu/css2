@@ -18,7 +18,7 @@ body{
 }
 
 h1, h2, h3, h4{
-  font-family: "Monsterrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 0.5px;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -96,7 +96,7 @@ nav a:visited {
 
 /* spacing */
 nav a {
-  padding: 12px 18px;
+  padding: 6px 12px;
   display: inline-block;
 }
 
@@ -112,7 +112,7 @@ nav a:hover {
   background-color: #ecb954;
   display: flex;
   align-items: center;
-  padding: 14px 16px;
+  padding: 8px 16px;
 }
 
 .top-bar {
@@ -331,86 +331,6 @@ border-radius: 8px;
   transform: translateY(0);
 }
 
-
-
-/* ===== Poll wrapper centered ===== */
-.poll {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;      /* center the whole poll block */
-  gap: 22px;
-  margin-top: 20px;
-}
-
-/* Each option row becomes a 3-column layout:
-   left label, middle bar, right button */
-.poll .option {
-  width: 100%;
-  max-width: 560px;         /* control how wide the poll looks */
-}
-
-/* Make the row look like your screenshot */
-.poll .option .row {
-  display: grid;
-  grid-template-columns: 150px 1fr 90px; /* label | bar | button */
-  align-items: center;
-  column-gap: 22px;
-}
-
-/* Left label area (name + percent under it) */
-.poll .option .row p {
-  margin: 0;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.1;
-  text-align: left;
-}
-
-/* Make the percent drop to next line under the name */
-.poll .option .row p .percent {
-  display: block;           /* forces new line */
-  margin-top: 6px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-/* Bar style */
-.poll .bar {
-  width: 100%;
-  height: 18px;
-  background: #d9d9d9;
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-/* Fill style */
-.poll .fill {
-  height: 100%;
-  width: 0%;
-  background: #f0c15c;      /* your yellow */
-  border-radius: 999px;
-}
-
-/* Vote button style */
-.poll .voteBtn {
-  width: 70px;
-  height: 36px;
-  border: none;
-  border-radius: 6px;
-  background: #f0c15c;
-  color: #8a5a00;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.poll .voteBtn:hover {
-  filter: brightness(0.95);
-}
-
-
-
-
   .food-explore ul {
     display: flex;
     justify-content: center;
@@ -431,7 +351,7 @@ border-radius: 8px;
 .food-explore ul li a {
     text-decoration: none;
     color: inherit;
-    display: block;            /* helps the whole card clickable */
+    display: block;  
 }
 
 .food-explore ul li .food-img {
@@ -444,14 +364,12 @@ border-radius: 8px;
     transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
 }
 
-/* Hover effect (mouse over) */
 .food-explore ul li a:hover .food-img {
     transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     filter: brightness(1.05);
 }
 
-/* Press effect (mouse down / dragging) */
 .food-explore ul li a:active .food-img {
     transform: scale(0.95);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -473,101 +391,114 @@ color: #6b4a1f;
 background: #fff6dc;
 border-radius: 999px;
 }
-/* ===== POLL (FINAL) ===== */
 
-/* Center the title text only */
+/* ===== POLL ===== */
+
+
 section h2 {
-  text-align: center;
+text-align: center;
 }
 
-/* Center the poll block */
+
+/* Poll container */
 .poll {
-  width: min(560px, 92vw);
-  margin: 24px auto 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  align-items: stretch; /* keep rows same width */
+width: min(560px, 92vw);
+margin: 24px auto 40px;
+display: flex;
+flex-direction: column;
+gap: 22px;
+align-items: stretch;
 }
 
-/* Each option row */
+
+/* Each option row wrapper */
 .poll .option {
-  width: 100%;
+width: 100%;
 }
 
-/* 3-column layout like your screenshot */
+
+/* 3-column layout: label | bar | button */
 .poll .option .row {
-  display: grid;
-  grid-template-columns: 170px auto auto;
-  align-items: start;     
-  column-gap: 22px;
+display: grid;
+grid-template-columns: 170px auto auto;
+align-items: start;
+column-gap: 22px;
 }
 
-/* Left label (name + percent under) */
+
+/* Label */
 .poll .option .row p {
-  margin: 0;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.1;
-  text-align: left; /* important */
-  padding-top: 2px;
+margin: 0;
+font-weight: 700;
+font-size: 18px;
+line-height: 1.1;
+text-align: left;
+padding-top: 2px;
 
-  white-space: nowrap;        /* 🔥 stop wrapping */
-  overflow: hidden;           /* prevent layout break */
-  text-overflow: ellipsis;    /* show … if too long */
+
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
-/* percent goes under the name */
+
+/* Percent badge */
 .poll .option .row p .percent {
-  display: block;
-  margin-top: 6px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #8a5a00;
-  background: #f6e3b4;     
-  width: fit-content;     
-  padding: 2px 6px;
-  border-radius: 5px;
-  line-height: 1;
+display: block;
+margin-top: 6px;
+font-size: 16px;
+font-weight: 700;
+color: #8a5a00;
+background: #f6e3b4;
+width: fit-content;
+padding: 2px 6px;
+border-radius: 5px;
+line-height: 1;
 }
+
 
 /* Bar */
 .poll .bar {
-  width: 220px;
-  height: 18px;
-  background: #d9d9d9;
-  border-radius: 999px;
-  overflow: hidden;
+width: 220px;
+height: 18px;
+background: #d9d9d9;
+border-radius: 999px;
+overflow: hidden;
 }
+
 
 /* Fill */
 .poll .fill {
-  height: 100%;
-  width: 0%;
-  background: #ecb954;
-  border-radius: 999px;
-  transition: width 0.5s ease;
+height: 100%;
+width: 0%;
+background: #ecb954;
+border-radius: 999px;
+transition: width 0.5s ease;
 }
 
-/* Button */
+
+/* Vote button */
 .poll .voteBtn {
-  width: 70px;
-  height: 36px;
-  border: none;
-  border-radius: 6px;
-  background: #ecb954;
-  color: #8a5a00;
-  font-weight: 700;
-  cursor: pointer;
+width: 70px;
+height: 36px;
+border: none;
+border-radius: 6px;
+background: #ecb954;
+color: #8a5a00;
+font-weight: 700;
+cursor: pointer;
 }
+
 
 .poll .voteBtn:hover {
-  background: #d9a63c;
+background: #d9a63c;
 }
 
+
+/* Voted state */
 .voteBtn.voted {
-  background-color: #ecb954;   /* darker color */
-  color: #8a5a00;
-  opacity: 0.8;
-  cursor: not-allowed;
+background-color: #ecb954;
+color: #8a5a00;
+opacity: 0.8;
+cursor: not-allowed;
 }
