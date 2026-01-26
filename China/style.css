@@ -1,3 +1,7 @@
+
+
+
+
 /* ===================== BASE CONTAINERS ===================== */
 
 .cuisine {
@@ -58,6 +62,7 @@ transition: transform 180ms ease, box-shadow 180ms ease;
 
 .cuisine .desc p {
   margin: 0 0 18px;
+  
 }
 
 /* ===================== FOOD EXPLORE GALLERY ===================== */
@@ -145,33 +150,6 @@ transition: transform 180ms ease, box-shadow 180ms ease;
   filter: brightness(0.95);
 }
 
-/* ===================== BACK TO HOME ===================== */
-
-.back-home {
-  margin: 40px 0;
-  text-align: center;
-}
-
-.back-btn {
-  display: inline-block;
-  padding: 14px 28px;
-
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  text-decoration: none;
-
-  background-color: #ecb954;
-  border-radius: 8px;
-
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.back-btn:hover {
-  background-color: #ae8a40;
-  transform: translateY(-2px);
-}
-
 /* ===================== HERO SECTION ===================== */
 
 .hero {
@@ -216,8 +194,10 @@ transition: transform 180ms ease, box-shadow 180ms ease;
 
 
 
+
 /* ===================== LIST STYLES ===================== */
 
+/*
 .desc-full h2 {
   margin: 14px 0 8px;
 }
@@ -250,28 +230,4 @@ transition: transform 180ms ease, box-shadow 180ms ease;
   display: inline-block;
   margin-bottom: 6px;
 }
-
-/* ===================== ANIMATIONS ===================== */
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ===================== SCROLL REVEAL ===================== */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 380ms ease, transform 380ms ease;
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+*/

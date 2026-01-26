@@ -1,37 +1,77 @@
 /*body*/
 /*If want to change*/
-/*body{
-  font-family: "Open Sans", sans-serif;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  margin: 0px;
-  padding: 0px;
+
+html {
+font-size: 15px; /* default is 16px → slightly smaller */
 }
 
-h1, h2, h3, h4 {
-  font-family: "Playfair Display", serif;
+
+body {
+line-height: 1.6;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4{
+  font-family: "Monsterrat", sans-serif;
   letter-spacing: 0.5px;
-   margin-top: 8px;
+  margin-top: 8px;
   margin-bottom: 8px;
 }
 
+.bigtitle {
+font-family: "Brush Script MT", "Brush Script Std", cursive;
+font-size: 56px;
+color: #6b4a1f;
+
+text-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
+}
+
 nav, nav a {
-  font-family: "Inter", "Open Sans", sans-serif;
-  font-weight: 500;
-}
-*/
-
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
+font-family: "Poppins", sans-serif;
+font-size: 17px;
+letter-spacing: 0.4px; /* subtle pop */
 }
 
-h1{
-    margin: 0px;
+.section-title {
+font: 800 32px "Montserrat", sans-serif;
+letter-spacing: 0.6px;
+color: #2b2b2b;
+
+
+margin: 40px 0 24px;
+text-align: center;
 }
+
+
+.gold-line {
+display: block;
+width: 60px;
+height: 4px;
+margin: 12px auto 0;
+background: #ecb954;
+border-radius: 2px;
+}
+
+.small-title {
+  font: 800 24px "Montserrat", sans-serif;
+  letter-spacing: 0.6px;
+  color: #2b2b2b;
+}
+
+.food-explore h3 {
+font-size: 21px;
+font-weight: 800;
+margin: 36px 0 14px;
+text-align: center;
+}
+
+
 
 
 /*nav bar*/
@@ -78,17 +118,17 @@ nav a:hover {
   top: 0;
   z-index: 1000;
 }
-/* ===== TEXT BOX (same as Korea) ===== */
+
 .cuisine .desc {
-  width: min(855px, 92vw);
-  margin: 40px auto 0;
+  width: min(780px, 92vw);
+  margin: 28px auto 0;
 
   text-align: left;
-  line-height: 1.7;
-  font-size: 18px;
+  line-height: 1.6;
+  font-size: 16px;
 
   background: linear-gradient(180deg, #fff 0%, #f8f8f8 100%);
-  padding: 20px 24px;
+  padding: 16px 20px;
   border-radius: 16px;
 
   border: 1px solid rgba(0,0,0,0.08);
@@ -103,7 +143,7 @@ nav a:hover {
 }
 
 .cuisine .desc p {
-  margin: 0 0 18px;
+  margin: 0 0 12px;
 }
 
 /* ===================== DROPDOWN ===================== */
@@ -171,13 +211,36 @@ nav a:hover {
   text-align: center;
 }
 
-.mapTitle{
-  margin: 10px 0 6px;
+.mapTitle {
+font-family: "Poppins", sans-serif;
+font-size: 22px;
+font-weight: 600;
+
+
+color: #333;
+margin-bottom: 16px;
+
+
+text-align: center;
+letter-spacing: 0.4px;
 }
 
-.mapSubtitle{
-  margin: 0 0 16px;
-  opacity: 0.85; 
+
+.mapSubtitle {
+margin: 12px auto 20px;
+text-align: center;
+
+
+font-size: 14px;
+font-weight: 500;
+letter-spacing: 0.3px;
+color: #666;
+
+
+padding: 8px 16px;
+background-color: #f7f7f7;
+border: 1px solid rgba(0, 0, 0, 0.08);
+border-radius: 8px;
 }
 
 .mapCard{
@@ -189,7 +252,7 @@ nav a:hover {
 
 .mapWrap{
   position: relative;
-  width: min(700px, 100%);  
+  width: min(620px, 100%);  
   margin: 20px auto;      
   border-radius: 14px;
   overflow: hidden;
@@ -393,6 +456,21 @@ nav a:hover {
     filter: brightness(0.9);
 }
 
+.food-explore ul li strong {
+display: inline-block;
+margin-bottom: 6px;
+padding: 3px 10px;
+
+
+font-family: "Montserrat", sans-serif;
+font-size: 14.5px;
+font-weight: 700;
+
+
+color: #6b4a1f;
+background: #fff6dc;
+border-radius: 999px;
+}
 /* ===== POLL (FINAL) ===== */
 
 /* Center the title text only */
