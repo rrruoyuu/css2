@@ -20,11 +20,11 @@ function createNavbar(targetId) {
   kMenu.className = "dropdown-content";
 
   const kFoods = [
-    { name: "Bibim", link: "bibim.html" },
+    { name: "Bibimbap", link: "bibim.html" },
     { name: "Gimbap", link: "gimbap.html" },
-    { name: "Jeon", link: "jeon.html" },
-    { name: "Jjajang", link: "jjajang.html" },
-    { name: "Tteok", link: "tteok.html" }
+    { name: "Kimchi Jeon", link: "jeon.html" },
+    { name: "Jjajangmyeon", link: "jjajang.html" },
+    { name: "Tteokbokki", link: "tteok.html" }
   ];
 
   kFoods.forEach(food => {

@@ -1,13 +1,7 @@
 /*body*/
-/*If want to change*/
 
 html {
-font-size: 15px; /* default is 16px → slightly smaller */
-}
-
-
-body {
-line-height: 1.6;
+font-size: 15px; 
 }
 
 body{
@@ -15,6 +9,7 @@ body{
   text-align: center;
   margin: 0;
   padding: 0;
+  line-height: 1.6;  
 }
 
 h1, h2, h3, h4{
@@ -48,8 +43,6 @@ margin: 40px 0 24px;
 text-align: center;
 }
 
-
-
 .gold-line {
 display: block;
 width: 60px;
@@ -72,12 +65,7 @@ margin: 36px 0 14px;
 text-align: center;
 }
 
-
-
-
-
 /*nav bar*/
-/* ===================== NAV BAR ===================== */
 
 nav {
   background-color: #ecb954;
@@ -106,7 +94,7 @@ nav a:hover {
   border-radius: 6px;
 }
 
-/* ===================== HEADER ===================== */
+/* Header */
 
 .header-container {
   background-color: #ecb954;
@@ -148,7 +136,7 @@ nav a:hover {
   margin: 0 0 12px;
 }
 
-/* ===================== DROPDOWN ===================== */
+/* Drropdown */
 
 /* wrapper */
 .dropdown {
@@ -218,10 +206,8 @@ font-family: "Poppins", sans-serif;
 font-size: 22px;
 font-weight: 600;
 
-
 color: #333;
 margin-bottom: 16px;
-
 
 text-align: center;
 letter-spacing: 0.4px;
@@ -232,12 +218,10 @@ letter-spacing: 0.4px;
 margin: 12px auto 20px;
 text-align: center;
 
-
 font-size: 14px;
 font-weight: 500;
 letter-spacing: 0.3px;
 color: #666;
-
 
 padding: 8px 16px;
 background-color: #f7f7f7;
@@ -346,7 +330,7 @@ border-radius: 8px;
     margin-bottom: 18px;
 }
 
-/* ===== FOOD GALLERY CLICK / PRESS EFFECT ===== */
+/*  FOOD GALLERY CLICK / PRESS EFFECT  */
 
 .food-explore ul li a {
     text-decoration: none;
@@ -392,7 +376,7 @@ background: #fff6dc;
 border-radius: 999px;
 }
 
-/* ===== POLL ===== */
+/* POLL  */
 
 
 section h2 {

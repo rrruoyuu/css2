@@ -127,6 +127,3 @@ document.body.appendChild(totalText);
     });
   });
 });
-
-
-// Clear local poll: localStorage.removeItem("poll_votes_v1__korea");

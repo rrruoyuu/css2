@@ -1,17 +1,13 @@
 // polling1.js
 document.addEventListener("DOMContentLoaded", () => {
-  // ✅ Unique poll data per page (each page stores its own votes)
-  // Example keys:
-  // poll_votes_v1__index_html
-  // poll_votes_v1__korea_korea_html
-  // poll_votes_v1__japan_udon_html
+  // Unique poll data per page (each page stores its own votes)
   const pollId = (location.pathname || "page")
     .replace(/[^\w-]+/g, "_")
     .toLowerCase();
 
   const VOTES_KEY = `poll_votes_v1__${pollId}`; // persistent totals (per page)
 
-  // ✅ per-page session lock (clears when tab/website is closed)
+  // per-page session lock (clears when tab/website is closed)
   const LOCK_KEY = `poll_lock_v1__${pollId}`;
 
   const pollEl = document.querySelector(".poll");
