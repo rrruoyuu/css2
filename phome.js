@@ -134,6 +134,3 @@ document.body.appendChild(totalText);
   });
 });
 
-// Clear all: localStorage.clear();
-// vote again immediately: sessionStorage.clear();
-

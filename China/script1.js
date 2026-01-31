@@ -1,17 +1,14 @@
 // nav-bar
 function createNavbar(targetId) {
   const navEl = document.createElement("nav");
-
-  // If current page is inside a folder (China/, Korea/, Japan/, Singapore/),
-  // then we need to go up one level to reach index.html and other folders.
-  const path = window.location.pathname; // e.g. /CSS2/China/china.html
+  const path = window.location.pathname;
   const inSubfolder =
     path.includes("/China/") ||
     path.includes("/Korea/") ||
     path.includes("/Japan/") ||
     path.includes("/Singapore/");
 
-  const base = inSubfolder ? "../" : "./"; // "../" from country pages, "./" from home
+  const base = inSubfolder ? "../" : "./";
 
   /* HOME */
   const homeNavItem = document.createElement("a");
@@ -150,7 +147,7 @@ function createNavbar(targetId) {
   homeNavItem.addEventListener("click", (e) => {
     const current = window.location.pathname;
     if (current.endsWith("/index.html") || current.endsWith("/")) {
-      e.preventDefault(); // stays on home, no error
+      e.preventDefault();
     }
   });
 }
