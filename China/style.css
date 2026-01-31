@@ -111,8 +111,19 @@
 }
 
 .desc-full {
-  display: none;
+  display: block;
   animation: fadeIn 220ms ease-out both;
+}
+.desc.has-toggle .desc-preview {
+  display: block;
+}
+
+.desc.has-toggle .desc-full {
+  display: none;
+}
+
+.desc.has-toggle .view-more-btn {
+  display: inline-block;
 }
 
 /* ===================== VIEW MORE BUTTON ===================== */

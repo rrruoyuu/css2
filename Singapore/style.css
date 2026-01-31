@@ -111,36 +111,7 @@
 }
 
 .desc-full {
-  display: none;
-  animation: fadeIn 220ms ease-out both;
-}
-
-/* ===================== VIEW MORE BUTTON ===================== */
-
-.view-more-btn {
-  margin-top: 14px;
-  padding: 10px 16px;
-
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-
-  background-color: #333;
-  color: #fff;
-  font-weight: 600;
-
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
-  transition: transform 160ms ease, filter 160ms ease, box-shadow 160ms ease;
-}
-
-.view-more-btn:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.05);
-}
-
-.view-more-btn:active {
-  transform: scale(0.98);
-  filter: brightness(0.95);
+  display: block;
 }
 
 /* ===================== HERO SECTION ===================== */

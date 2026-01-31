@@ -160,9 +160,11 @@ nav a:hover {
   display: none;
   position: absolute;
   top: 100%;    
-  left: 0;
+  left: auto;
+  right: 0;
   background: white;
   min-width: 180px;
+  max-width: 90vw;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   overflow: hidden;
