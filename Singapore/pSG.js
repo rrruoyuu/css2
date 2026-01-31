@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     (location.pathname || "page").replace(/[^\w-]+/g, "_").toLowerCase();
   const LOCK_KEY = `poll_lock_v1__singapore__${pageId}`;
 
-  // ✅ FIX: get poll element first
+  // get poll element first
   const pollEl = document.querySelector(".poll");
   if (!pollEl) return;
 
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let hasVoted = sessionStorage.getItem(LOCK_KEY) === "1";
 
-  // ✅ FIX: always find the h2 in the same section as this poll
+  // always find h2 in the same section as this poll
   const pollTitle = pollEl.closest("section")?.querySelector("h2") || null;
 
   const msg = document.createElement("p");

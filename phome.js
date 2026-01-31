@@ -1,13 +1,13 @@
 // polling1.js
 document.addEventListener("DOMContentLoaded", () => {
-  // Unique poll data per page (each page stores its own votes)
+  // Unique poll data per page 
   const pollId = (location.pathname || "page")
     .replace(/[^\w-]+/g, "_")
     .toLowerCase();
 
-  const VOTES_KEY = `poll_votes_v1__${pollId}`; // persistent totals (per page)
+  const VOTES_KEY = `poll_votes_v1__${pollId}`; // persistent totals 
 
-  // per-page session lock (clears when tab/website is closed)
+  // clears when tab/website is closed
   const LOCK_KEY = `poll_lock_v1__${pollId}`;
 
   const pollEl = document.querySelector(".poll");
@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const voteBtns = pollEl.querySelectorAll(".voteBtn");
   if (optionEls.length === 0 || voteBtns.length === 0) return;
 
-  // lock persists on refresh + navigation (same tab)
+  // lock persists on refresh + navigation 
   let hasVoted = sessionStorage.getItem(LOCK_KEY) === "1";
 
-  // ===== Insert message + total count below THIS poll title =====
+  //  Insert message + total count below THIS poll title 
   const sectionEl = pollEl.closest("section") || document;
   const pollTitle = sectionEl.querySelector("h2");
 

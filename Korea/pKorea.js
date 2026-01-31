@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let hasVoted = sessionStorage.getItem(LOCK_KEY) === "1";
 
-  // ✅ ALWAYS get the correct h2 above this poll (no exact text matching)
   const pollTitle = pollEl.closest("section")?.querySelector("h2") || null;
 
   const msg = document.createElement("p");

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     (location.pathname || "page").replace(/[^\w-]+/g, "_").toLowerCase();
   const LOCK_KEY = `poll_lock_v1__japan__${pageId}`;
 
-  // ✅ FIX: define pollEl (your missing variable)
+  // define pollEl 
   const pollEl = document.querySelector(".poll");
   if (!pollEl) return;
 
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let hasVoted = sessionStorage.getItem(LOCK_KEY) === "1";
 
-  // ✅ FIX: get the h2 inside the same poll section
+  // get h2 inside the same poll section
   const pollTitle = pollEl.closest("section")?.querySelector("h2") || null;
 
   const msg = document.createElement("p");
