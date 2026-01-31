@@ -7,7 +7,7 @@ function createNavbar(targetId) {
   homeNavItem.href = "../index.html";
   homeNavItem.textContent = "Home";
 
-  /* ===== KOREA ===== */
+  /*  KOREA  */
   const kDropdown = document.createElement("div");
   kDropdown.className = "dropdown";
 
@@ -37,7 +37,7 @@ function createNavbar(targetId) {
   kDropdown.appendChild(kToggle);
   kDropdown.appendChild(kMenu);
 
-  /* ===== JAPAN ===== */
+  /*  JAPAN  */
   const jpDropdown = document.createElement("div");
   jpDropdown.className = "dropdown";
 
@@ -67,7 +67,7 @@ function createNavbar(targetId) {
   jpDropdown.appendChild(jpToggle);
   jpDropdown.appendChild(jpMenu);
 
-  /* ===== SINGAPORE ===== */
+  /*  SINGAPORE  */
   const sgDropdown = document.createElement("div");
   sgDropdown.className = "dropdown";
 
@@ -97,7 +97,7 @@ function createNavbar(targetId) {
   sgDropdown.appendChild(sgToggle);
   sgDropdown.appendChild(sgMenu);
 
-  /* ===== CHINA ===== */
+  /*  CHINA  */
   const cDropdown = document.createElement("div");
   cDropdown.className = "dropdown";
 
@@ -127,7 +127,7 @@ function createNavbar(targetId) {
   cDropdown.appendChild(cToggle);
   cDropdown.appendChild(cMenu);
 
-  /* ===== APPEND ALL ===== */
+  /*  APPEND ALL  */
   navEl.appendChild(homeNavItem);
   navEl.appendChild(kDropdown);
   navEl.appendChild(jpDropdown);

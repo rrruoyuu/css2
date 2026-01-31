@@ -1,8 +1,8 @@
 // polling_china.js  (use for China pages)
 document.addEventListener("DOMContentLoaded", () => {
-  const VOTES_KEY = "poll_votes_v1__china"; // ✅ unique for CHINA
+  const VOTES_KEY = "poll_votes_v1__china"; // 
 
-  // per-page session lock (clears when tab/website is closed)
+  // clears when tab/website is closed)
   const pageId =
     (location.pathname || "page").replace(/[^\w-]+/g, "_").toLowerCase();
   const LOCK_KEY = `poll_lock_v1__china__${pageId}`;
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // lock persists on refresh + navigation
   let hasVoted = sessionStorage.getItem(LOCK_KEY) === "1";
 
-  // ===== Insert message + total count below poll title =====
+  //  Insert message + total count below poll title 
   const pollTitle = Array.from(document.querySelectorAll("section h2")).find(
     h2 =>
       h2.textContent.trim().toLowerCase() === "vote for your favourite cuisine!"
@@ -137,5 +137,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Clear local poll: localStorage.removeItem("poll_votes_v1__china");
 

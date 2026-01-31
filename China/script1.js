@@ -2,23 +2,21 @@
 function createNavbar(targetId) {
   const navEl = document.createElement("nav");
 
-  // If current page is inside a folder (China/, Korea/, Japan/, Singapore/),
-  // then we need to go up one level to reach index.html and other folders.
-  const path = window.location.pathname; // e.g. /CSS2/China/china.html
+  
+  const path = window.location.pathname;
   const inSubfolder =
     path.includes("/China/") ||
     path.includes("/Korea/") ||
     path.includes("/Japan/") ||
     path.includes("/Singapore/");
 
-  const base = inSubfolder ? "../" : "./"; // "../" from country pages, "./" from home
-
+  const base = inSubfolder ? "../" : "./"; 
   /* HOME */
   const homeNavItem = document.createElement("a");
   homeNavItem.href = `${base}index.html`;
   homeNavItem.textContent = "Home";
 
-  /* ===== KOREA ===== */
+  /*  KOREA  */
   const kDropdown = document.createElement("div");
   kDropdown.className = "dropdown";
 
@@ -48,7 +46,7 @@ function createNavbar(targetId) {
   kDropdown.appendChild(kToggle);
   kDropdown.appendChild(kMenu);
 
-  /* ===== JAPAN ===== */
+  /*  JAPAN  */
   const jpDropdown = document.createElement("div");
   jpDropdown.className = "dropdown";
 
@@ -78,7 +76,7 @@ function createNavbar(targetId) {
   jpDropdown.appendChild(jpToggle);
   jpDropdown.appendChild(jpMenu);
 
-  /* ===== SINGAPORE ===== */
+  /*  SINGAPORE  */
   const sgDropdown = document.createElement("div");
   sgDropdown.className = "dropdown";
 
@@ -108,7 +106,7 @@ function createNavbar(targetId) {
   sgDropdown.appendChild(sgToggle);
   sgDropdown.appendChild(sgMenu);
 
-  /* ===== CHINA ===== */
+  /*  CHINA  */
   const cDropdown = document.createElement("div");
   cDropdown.className = "dropdown";
 
@@ -138,7 +136,7 @@ function createNavbar(targetId) {
   cDropdown.appendChild(cToggle);
   cDropdown.appendChild(cMenu);
 
-  /* ===== APPEND ALL ===== */
+  /*  APPEND ALL  */
   navEl.appendChild(homeNavItem);
   navEl.appendChild(kDropdown);
   navEl.appendChild(jpDropdown);
@@ -150,7 +148,7 @@ function createNavbar(targetId) {
   homeNavItem.addEventListener("click", (e) => {
     const current = window.location.pathname;
     if (current.endsWith("/index.html") || current.endsWith("/")) {
-      e.preventDefault(); // stays on home, no error
+      e.preventDefault(); 
     }
   });
 }
