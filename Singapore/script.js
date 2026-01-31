@@ -44,7 +44,7 @@ function createNavbar(targetId) {
   const jpToggle = document.createElement("a");
   jpToggle.className = "dropdown-toggle";
   jpToggle.href = "../Japan/japan.html";
-  jpToggle.innerHTML = `Japanese <span class="arrow">▼</span>`;
+  jpToggle.innerHTML = `Japan <span class="arrow">▼</span>`;
 
   const jpMenu = document.createElement("div");
   jpMenu.className = "dropdown-content";
@@ -110,7 +110,7 @@ function createNavbar(targetId) {
   cMenu.className = "dropdown-content";
 
   const cFoods = [
-    { name: "Atea", link: "atea.html" },
+    { name: "Tea", link: "atea.html" },
     { name: "Xiao Long Bao", link: "axiaolongbao.html" },
     { name: "Hotpot", link: "hotpot.html" },
     { name: "Mala", link: "mala.html" },
